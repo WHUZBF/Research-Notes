@@ -44,7 +44,7 @@ $\sim$表示它们作用$f$得到的值一样。这么来看原先的那个$V\ti
 	\begin{center}
 		\begin{tikzcd}
 			V\times W \arrow[r,"h"] \arrow[dr,"f"]
-			& Y= V\otimes W\arrow[d,dashrightarrow,"g"]\\
+			& Y= V\otimes W\arrow[d,dashrightarrow,"\exists !g"]\\
 			& Z
 		\end{tikzcd}
 	\end{center}
@@ -52,6 +52,44 @@ $\sim$表示它们作用$f$得到的值一样。这么来看原先的那个$V\ti
 \end{definition}
 
 直和和直积在数学上真的不怎么区分，我先给出泛性质的定义你就知道它们之间的区别有多么微妙了。
+\begin{definition}
+	直积在数学上指的是\textbf{积范畴}，即对于范畴 $\mathcal{C}$ 中的一族对象 $X_i\left(i\in I\right)$，若存在一个对象，通常记为 $\prod_{i\in I}X_i$ ,以及一族态射$\pi_j:\prod_{i\in I}X_i\to X_j$使得对任意对象 $X$ 和一族态射$f_j:X\to X_j$，都存在唯一的态射$f:X\to\prod_{i\in I}X_i$使得对任意 $i\in I$ 都有$	\pi_i\circ f=f_i$
+	那么对象 $\prod_{i\in I}X_i$ 连同态射族 $\{\pi_i:i\in I\}$ 称为对象族 $\{X_i:i\in I\}$ 的积(product)。画出交换图如下：
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[r,dashrightarrow,"\exists ! f"] \arrow[dr,"f_j" swap]
+			& \prod_{i\in I} X_i\arrow[d,"\pi_j"]\\
+			& X_j
+		\end{tikzcd}
+	\end{center}
+\end{definition}
 
+\begin{definition}
+	直和在数学上指的是\textbf{余积范畴}（coproduct），交换图上的定义只需要把上面图的箭头全部反转就好了，文字定义不难相应写出：
+	\begin{center}
+		\begin{tikzcd}
+			X \arrow[r,dashleftarrow,"\exists ! f"]\arrow[dr,leftarrow,"f_j",swap]
+			& \coprod_{i\in I} X_i\arrow[d,leftarrow,"\iota_j"]\\
+			& X_j 
+		\end{tikzcd}
+	\end{center}
+	可见两者定义上差的只是一个是投影$\pi$，一个是嵌入$\iota_i$。
+\end{definition}
+从范畴的角度看它们差的仅仅只是一个是积一个是余积，把箭头反过来罢了！所以数学上真的不怎么区分，特别是对于线性空间范畴，这个定义真的就是等价的！从维数上也能看出这一点$\mathbb{R}^m\times\mathbb{R}^n=\mathbb{R}^m\oplus\mathbb{R}^n=\mathbb{R}^{m+n}$，但是前面的张量积$\mathbb{R}^{m}\otimes\mathbb{R}^{n}=\mathbb{R}^{mn}$。但是这里说的是外直和，后面还会讲到内直和。
 
-从范畴的角度看它们差的仅仅只是一个是嵌入一个是投影，把箭头反过来罢了！所以数学上真的不怎么区分，但是这里说的是外直和，后面还会讲到内直和。
+回到物理一些的想法，翻阅喀兴林老师的高量课本，第一章就给出来直和的三条性质：
+\begin{description}
+	\item[数乘分配]$\lambda \left(\ket{\psi}\oplus\ket{\phi}\right)=\lambda\ket{\psi}\oplus\lambda\ket{\phi}$
+	\item[加法] $\ket{\psi}\oplus\ket{\phi}+\ket{\psi^\prime}\oplus\ket{\phi^\prime}=\left(\ket{\psi}+\ket{\psi^\prime}\right)\oplus\left(\ket{\phi}+\ket{\phi^\prime}\right)$
+	\item[内积]$\left(\ket{\psi}\oplus\ket{\phi},\ket{\psi^\prime}\oplus\ket{\phi^\prime}\right)=\braket{\psi}{\phi}+\braket{\psi^\prime}{\phi^\prime}$
+\end{description}
+这不和自由向量空间的定义一模一样么！所以在线性空间范畴上真看不出啥区别。我们再看\textbf{直和}和一般的\textbf{向量的和}有啥区别。注意我们定义主打的就是两个希尔伯特空间是互相分开的，互相不影响，我们在定义两个向量空间的外直和时，我们并不要求两个向量空间的元素之间有加法定义，而是定义直和来把多个自由度强行直接并起来。这其实有某种选择定则在里面，当我们把两个态加起来的时候，我们认为它们处于同一个线性空间，可以叠加得到混合态。但是你绝对不会把一个自旋为0和一个自旋为$\frac12$的态直接叠加起来，因为这意味着一个单粒子态一会儿是费米子，一会儿是玻色子，尽管理论上这种禁闭没有严格证明（见Weinberg场论第一卷相关部分），但是我们从实验上可以相信这种禁闭是存在的，而这个时候考虑总的体系希尔伯特空间，最好的方式就是用直和了，也就是直接直积并起来罢了。
+
+量子力学里面更多的去讲直和是讲巨正则系综构造Fock空间。由于非相对论性的量子力学是个粒子数不变的体系，所以也存在上面与自旋类似的选择定则，也就是说你不会把两个粒子数不同的态直接加起来构造一个混合态，这是没有物理意义的。要用的时候就直接把他们看作是处于完全不同的希尔伯特空间，有自己的一套加法数乘规则，而且互不影响，最后再把它们通过直和直接并起来，构成一个系综，是一个混合态。
+
+内直和就完全不一样了，内直和我们首先是有一个很大的向量空间，然后想去考虑他的分解，但是我们比较关注“正交分解”，也就是说希望把$V$分解为一系列子空间$V_1,V_2,\cdots$，这些子空间互相除了零元素没有公共元素，但它们之间的元素是有子空间自然诱导的加法的。如果对于$V$中的任意一个元素$v$，都存在且唯一一组$(v_1,v_2,\cdots)$使得$v=\sum_i v_i$，则称$V$是$V_1,V_2,\ldots$的（内）直和，也记为：
+\begin{equation}
+	V=\bigoplus_{i=1} V_i
+\end{equation}
+
+在讨论群表示的时候涉及到群表示的分解，那个分解实际上就是在把群表示空间分解为一系列更小的空间的内直和，每个最小的不能再分的块就是不可约表示。在纯粹考虑矩阵理论的时候也会谈及张量积和直和的概念，矩阵的直和应该对应到内直和，而张量积就是前面讨论的张量积（把矩阵看成是线性算符，$V\otimes W$看成是$(V^*\otimes W^*)^*$），只是把前面的理论用线性算符重写了一遍，并选取了一组基底写成矩阵形式。不少文献也把矩阵的张量积叫克罗内克积。
