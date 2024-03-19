@@ -1,0 +1,57 @@
+\chapter{数学疑难杂症}
+\section{直积$\cdot$张量积$\cdot$直和}
+物理人在这些概念上往往非常模糊，胡乱使用，现在我们使用物理人的思想来区分下这几个概念。由于这几个概念的使用场景是在量子力学，所以我们在向量空间上讨论这三个运算。
+
+直积和张量积是紧密相连的，这两个概念一起介绍。直积从定义上讲就是给两个集合，然后把两个集合简单的并在一起构成一个更大的集合，$A\times B$，仅此而已。但我们一般会在上面进一步定义内积和加法数乘使得其成为一个线性空间：
+\begin{description}
+	\item[加法] $(a,b)+(a^\prime,b^\prime)=(a+a^\prime,b+b^\prime)$
+	\item[数乘] $\lambda (a,b)=(\lambda a,\lambda b),\quad\lambda\in\mathbb{F}$
+	\item[内积] $(a,b)\cdot (a^\prime,b^\prime)= a\cdot a^\prime +b\cdot b^\prime$
+\end{description}
+这样构成的空间称为$\mathbb{F}$上的自由向量空间:
+\begin{equation}
+	\mathcal{F}(V,W;\mathbb{F})\equiv \left\{\sum_{(v,w)\in V\times W}k_{v,w}(v,w),k_{v,w}\in\mathbb{F}\right\}
+\end{equation}
+这个向量空间非常大，就是把每个$(u,v)\in V\times W$都拿来作为基底张成的线性空间。张量积的初衷是想去找$V\times W\to Z$上的双线性函数$f$，双线性函数一定满足下面的条件：
+\begin{equation}
+	\begin{aligned}&\text{ (}k_1v_1+k_2v_2,w)\sim k_1(v_1,w)+k_2(v_2,w)\\&(v,k_1w_1+k_2w_2)\sim k_1(v,w_1)+k_2(v,w_2)\end{aligned}
+\end{equation}
+$\sim$表示它们作用$f$得到的值一样。这么来看原先的那个$V\times W$还是太大了，无法自然地蕴含上面的等价关系，所以我们干脆把上面的两条等价关系给模掉，得到一个更合适的线性空间$Y$：
+\begin{equation}
+	Y\equiv \mathcal{F}(V,W)/\sim
+\end{equation}
+数学人更喜欢用的不是上面两条，而是和它们等价的下面四条：
+\begin{equation}
+	\begin{aligned}
+		&\begin{aligned}(v_1+v_2,w)\sim(v_1,w)+(v_2,w)\end{aligned} \\
+		&\begin{aligned}(v,w_1+w_2)\sim(v,w_1)+(v,w_2)\end{aligned} \\
+		&(kv,w)\sim k(v,w) \\
+		&(v,kw)\sim k(v,w)
+	\end{aligned}
+\end{equation}
+
+从$V\times W$到$Y$的线性映射我们记为$h$，则$f$就自然诱导出来了$Y\to Z$的线性映射$g$，而且$Y$也小多了，我们也没必要去强调$g$的双线性性质，现在$Y$自己就蕴含了线性映射的双线性性。我们把这个新的空间叫做$V\otimes W$，即张量积空间。物理上我们把里面的元素写为$\ket{\psi}\ket{\phi}$，而且前面的四条性质就蕴含在我们物理上对张量积的普遍共识，物理上对于张量积的应用一般是体系有多个自由度，比如多个粒子或者一个粒子但是有自旋这种自由度，那么整个希尔伯特空间就看作是每个自由度的希尔伯特空间的张量积。而且在每个自由度上的矢量加法满足$\otimes$的分配律。
+
+由于任何一个映射$f$都可以诱导出映射$g$，所以很多时候我们不会额外区分两者，事实上可以证明双线性映射空间$\mathscr{L}(V,W;Z)$和$\mathscr{L}(V\otimes W;Z)$是同构的。在物理上我们考虑的线性空间都是内积空间\footnote{尽管张量积的定义不需要内积，对偶空间也不需要，这里我们只看有内积的简单情况。}，根据里斯表示定理，每个向量空间中的元素都可以和其对偶空间中的元素通过内积双线性性建立一一对应，也即所谓ket和bra的概念。如果取：
+\begin{equation}
+	(\bra{\psi_1}\otimes\bra{\phi_1})\cdot (\ket{\phi_1}\otimes\ket{\psi_2})=\braket{\phi_1}{\phi_2}\cdot\braket{\psi_1}{\psi_2}
+\end{equation}
+那么很容易说明$V^*\otimes W^*=(V\otimes W)^*$。当然，这一点的成立并不依赖于上面的内积选取\footnote{毕竟它的定义就不需要内积，这里局限在内积空间上讨论感觉从物理直观上更容易说清楚，用严谨的general的数学反而迷糊。}，只是量子力学里面都是这么取的。
+
+上面的定义是构造性的，但数学上更喜欢的是泛性质的定义，直接用下面的交换图就好了：
+\begin{definition}
+	张量积空间是某个向量空间$Y$ 配以双线性映射 $h:V\times W\to Y$ ,使得对于任意双线性映射 $f:V\times W\to Z$ ,存在唯一的线性映射 $g:Y\to Z$ ,使 $f=g\circ h$ 。
+	\begin{center}
+		\begin{tikzcd}
+			V\times W \arrow[r,"h"] \arrow[dr,"f"]
+			& Y= V\otimes W\arrow[d,dashrightarrow,"g"]\\
+			& Z
+		\end{tikzcd}
+	\end{center}
+	上面交换图中虚线的意思是存在且唯一存在一个映射使得图标交换。
+\end{definition}
+
+直和和直积在数学上真的不怎么区分，我先给出泛性质的定义你就知道它们之间的区别有多么微妙了。
+
+
+从范畴的角度看它们差的仅仅只是一个是嵌入一个是投影，把箭头反过来罢了！所以数学上真的不怎么区分，但是这里说的是外直和，后面还会讲到内直和。

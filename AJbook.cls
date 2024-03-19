@@ -31,7 +31,7 @@
 \DeclareStringOption[]{coverpage}	% 封面档档名, 默认为空
 \DeclareStringOption{fontsetup}	% 字体设定档档名
 \DeclareStringOption{titlesetup}	% 章节标题设定档档名
-\DeclareStringOption[b5]{geometry}	% 版面 (默认 b5)
+\DeclareStringOption[a4]{geometry}	% 版面 (默认 b5)
 
 \PassOptionsToPackage{dvipsnames}{xcolor}	% 让 xcolor 带 dvipsnames 选项; tikz 随后会载入之.
 

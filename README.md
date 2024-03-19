@@ -28,7 +28,7 @@
 
 ## 数学
 
-- [ ] 为啥要有张量积？直积直和到底有啥区别？内外直和又是什么？（限于线性空间的讨论） 
+- [x] 为啥要有张量积？直积直和到底有啥区别？内外直和又是什么？（限于线性空间的讨论） 
 
   
 
@@ -75,4 +75,28 @@ fc-list -f "%{family}\n" :lang=zh-cn >d:\list.txt
 ```powershell
 fc-cache -fsv
 ```
-刷新三次，然后就能正常编译了。
+刷新三次，然后就能正常编译了。但是这个时候章节名称字体还是有问题，不是黑体，需要在titles-setup.tex文件中：
+
+```latex
+% 用 titlesec 设置各章标题
+\titleformat{name=\chapter}
+	{\filright\sffamily\CJKfamily{hei2}\bfseries\Huge}	% Format
+	{}	% Label
+	{0mm}	% Sep
+	{\MakeChapBox{\thechapter}{#1}}	% Before-code
+	[]	% After-code
+\titlespacing*{name=\chapter}	% 设置间隔
+	{1pc}{*4}{1em}	% {left}{before-sep}{after-sep}
+
+\titleformat{name=\chapter, numberless}
+	{\filcenter\sffamily\CJKfamily{hei2}\bfseries\Huge}	% Format
+	{}	% Label
+	{0mm}	% Sep
+	{\MakeChapBoxSingle{#1}}	% Before-code
+	[{\if@mainmatter
+		\addcontentsline{toc}{chapter}{#1}
+		\markboth{#1}{}
+	\fi}]	% After-code: 无号章如果出现在正文中, 就加入目录并相应地设置天眉.
+```
+
+将上面这一段中的hei2全部改为sectionfont，字体的设置就完全和GitHub上的模板pdf一模一样了。

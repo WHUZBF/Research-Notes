@@ -76,7 +76,7 @@
 
 % 用 titlesec 设置各章标题
 \titleformat{name=\chapter}
-	{\filright\sffamily\CJKfamily{hei2}\bfseries\Huge}	% Format
+	{\filright\sffamily\CJKfamily{sectionfont}\bfseries\Huge}	% Format
 	{}	% Label
 	{0mm}	% Sep
 	{\MakeChapBox{\thechapter}{#1}}	% Before-code
@@ -85,7 +85,7 @@
 	{1pc}{*4}{1em}	% {left}{before-sep}{after-sep}
 
 \titleformat{name=\chapter, numberless}
-	{\filcenter\sffamily\CJKfamily{hei2}\bfseries\Huge}	% Format
+	{\filcenter\sffamily\CJKfamily{sectionfont}\bfseries\Huge}	% Format
 	{}	% Label
 	{0mm}	% Sep
 	{\MakeChapBoxSingle{#1}}	% Before-code

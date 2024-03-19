@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.8)  19 MAR 2024 01:03
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.8)  19 MAR 2024 13:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Template-AJbook.tex
-(./Template-AJbook.tex
+**main.tex
+(./main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (./AJbook.cls
 Document Class: AJbook 2018/03/04 Class for the book project Methods of Algebra
@@ -1054,7 +1054,277 @@ Package: titletoc 2021/07/05 v2.14 TOC entries
 \c@ttlp@side=\count473
 \ttlp@side=\count474
 ))
-(d:/texlive/2023/texmf-dist/tex/latex/imakeidx/imakeidx.sty
+(d:/texlive/2023/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(d:/texlive/2023/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/b/n --> U/stmry/m/n on input line 35.
+
+(d:/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen313
+\ar@mcellbox=\box83
+\extrarowheight=\dimen314
+\NC@list=\toks41
+\extratabsurround=\skip94
+\backup@length=\skip95
+\ar@cellbox=\box84
+)
+(d:/texlive/2023/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen315
+\c@nlinenum=\count475
+\TeXr@lab=\toks42
+)
+(d:/texlive/2023/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
+
+(d:/texlive/2023/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.cod
+e.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen316
+\pgfarrowlength=\dimen317
+\pgfarrowwidth=\dimen318
+\pgfarrowlinewidth=\dimen319
+)))
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.t
+ex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.a
+rrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (d:/texlive/2023/texmf-dist/tex/latex/braids/braids.sty
+Package: braids 2011/10/18 v1.1 Tikz/PGF commands for drawing braid diagrams
+
+
+Package braids Warning: This package has been reimplemented as a TikZ library; 
+if starting with a fresh document, please consider using that instead. on input
+ line 19.
+
+\braid@width=\dimen320
+\braid@height=\dimen321
+\braid@tx=\dimen322
+\braid@ty=\dimen323
+\braid@nx=\dimen324
+\braid@ny=\dimen325
+\braid@cy=\dimen326
+\braid@dy=\dimen327
+\braid@eh=\dimen328
+\c@braid@level=\count476
+\c@braid@strands=\count477
+) (d:/texlive/2023/texmf-dist/tex/latex/tqft/tqft.sty
+Package: tqft 2017/06/01 v2.1 Tikz/PGF commands for drawing TQFT diagrams
+\tqft@xa=\dimen329
+\tqft@xb=\dimen330
+\tqft@c=\dimen331
+\tqft@ch=\dimen332
+\tqft@h=\dimen333
+\tqft@s=\dimen334
+\tqft@w=\dimen335
+)
+(d:/texlive/2023/texmf-dist/tex/latex/ytableau/ytableau.sty
+Package: ytableau 2021/06/12 v1.4 Many-featured Young tableaux and Young diagra
+ms
+\tableaux@YT=\box85
+\thistableau@YT=\box86
+\refhtdp@YT=\box87
+\toks@YT=\toks43
+\opttoksa@YT=\toks44
+\opttoksb@YT=\toks45
+\boxdim@YT=\dimen336
+\tableauwd@YT=\dimen337
+\count@YT=\count478
+
+(d:/texlive/2023/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks46
+\pgfopts@list@add@b@toks=\toks47
+))
+(d:/texlive/2023/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+)
+(d:/texlive/2023/texmf-dist/tex/latex/carlisle/slashed.sty
+Package: slashed 1997/01/16 v0.01 Feynman Slashed Character Notation (DPC)
+)
+(d:/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count479
+\float@exts=\toks48
+\float@box=\box88
+\@float@everytoks=\toks49
+\@floatcapt=\box89
+)
+(d:/texlive/2023/texmf-dist/tex/latex/hobby/tikzlibraryhobby.code.tex
+(d:/texlive/2023/texmf-dist/tex/latex/hobby/pgflibraryhobby.code.tex
+(d:/texlive/2023/texmf-dist/tex/latex/hobby/hobby.code.tex
+(d:/texlive/2023/texmf-dist/tex/latex/hobby/pml3array.sty
+\l_array_base_int=\count480
+\l_array_top_int=\count481
+\l_array_tmp_int=\count482
+\g_array_base_int=\count483
+)
+\l_hobby_npoints_int=\count484
+\l_hobby_draw_int=\count485
+)))
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryintersections.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.c
+ode.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+\pgf@intersect@solutions=\count486
+))
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.markings.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
+ex
+\pgfdecoratedcompleteddistance=\dimen338
+\pgfdecoratedremainingdistance=\dimen339
+\pgfdecoratedinputsegmentcompleteddistance=\dimen340
+\pgfdecoratedinputsegmentremainingdistance=\dimen341
+\pgf@decorate@distancetomove=\dimen342
+\pgf@decorate@repeatstate=\count487
+\pgfdecorationsegmentamplitude=\dimen343
+\pgfdecorationsegmentlength=\dimen344
+)
+\tikz@lib@dec@box=\box90
+)
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.markings.code.tex))
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathreplacing.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathreplacing.code.tex))
+(d:/texlive/2023/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks50
+\t@pgfplots@tokb=\toks51
+\t@pgfplots@tokc=\toks52
+\pgfplots@tmpa=\dimen345
+\c@pgfplots@coordindex=\count488
+\c@pgfplots@scanlineindex=\count489
+
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.te
+x))
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
+upp_loader.code.tex
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks53
+\t@pgf@tokb=\toks54
+\t@pgf@tokc=\toks55
+
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
+upp_pgfutil-common-lists.tex))
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+cture.code.tex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+ctureext.code.tex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.co
+de.tex
+\c@pgfplotsarray@tmp=\count490
+)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.c
+ode.tex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.c
+ode.tex
+\c@pgfplotstable@counta=\count491
+\t@pgfplotstable@a=\toks56
+)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.co
+de.tex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.
+tex))
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.te
+x)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfsh
+ading.code.tex
+\c@pgfplotslibrarysurf@no=\count492
+
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
+ding.pgfsys-xetex.def
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
+ding.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count493
+))))
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.t
+ex
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex
+))) (d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.t
+ex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathmorphing.code.tex
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathmorphing.code.tex))
+(d:/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.conto
+urlua.code.tex)
+\pgfplots@numplots=\count494
+\pgfplots@xmin@reg=\dimen346
+\pgfplots@xmax@reg=\dimen347
+\pgfplots@ymin@reg=\dimen348
+\pgfplots@ymax@reg=\dimen349
+\pgfplots@zmin@reg=\dimen350
+\pgfplots@zmax@reg=\dimen351
+)
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(d:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.
+tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (d:/texlive/2023/texmf-dist/tex/latex/imakeidx/imakeidx.sty
 Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
 nous mode
 
@@ -1063,10 +1333,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (d:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (d:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks41
-\XKV@tempa@toks=\toks42
+\XKV@toks=\toks57
+\XKV@tempa@toks=\toks58
 )
-\XKV@depth=\count475
+\XKV@depth=\count495
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (d:/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -1077,35 +1347,27 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 (d:/texlive/2023/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
-\c@tracingmulticols=\count476
-\mult@box=\box83
-\multicol@leftmargin=\dimen313
-\c@unbalance=\count477
-\c@collectmore=\count478
-\doublecol@number=\count479
-\multicoltolerance=\count480
-\multicolpretolerance=\count481
-\full@width=\dimen314
-\page@free=\dimen315
-\premulticols=\dimen316
-\postmulticols=\dimen317
-\multicolsep=\skip94
-\multicolbaselineskip=\skip95
-\partial@page=\box84
-\last@line=\box85
-\maxbalancingoverflow=\dimen318
-\mult@rightbox=\box86
-\mult@grightbox=\box87
-\mult@firstbox=\box88
-\mult@gfirstbox=\box89
-\@tempa=\box90
-\@tempa=\box91
-\@tempa=\box92
-\@tempa=\box93
-\@tempa=\box94
-\@tempa=\box95
-\@tempa=\box96
-\@tempa=\box97
+\c@tracingmulticols=\count496
+\mult@box=\box91
+\multicol@leftmargin=\dimen352
+\c@unbalance=\count497
+\c@collectmore=\count498
+\doublecol@number=\count499
+\multicoltolerance=\count500
+\multicolpretolerance=\count501
+\full@width=\dimen353
+\page@free=\dimen354
+\premulticols=\dimen355
+\postmulticols=\dimen356
+\multicolsep=\skip96
+\multicolbaselineskip=\skip97
+\partial@page=\box92
+\last@line=\box93
+\maxbalancingoverflow=\dimen357
+\mult@rightbox=\box94
+\mult@grightbox=\box95
+\mult@firstbox=\box96
+\mult@gfirstbox=\box97
 \@tempa=\box98
 \@tempa=\box99
 \@tempa=\box100
@@ -1134,21 +1396,30 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \@tempa=\box123
 \@tempa=\box124
 \@tempa=\box125
-\c@minrows=\count482
-\c@columnbadness=\count483
-\c@finalcolumnbadness=\count484
-\last@try=\dimen319
-\multicolovershoot=\dimen320
-\multicolundershoot=\dimen321
-\mult@nat@firstbox=\box126
-\colbreak@box=\box127
-\mc@col@check@num=\count485
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\c@minrows=\count502
+\c@columnbadness=\count503
+\c@finalcolumnbadness=\count504
+\last@try=\dimen358
+\multicolovershoot=\dimen359
+\multicolundershoot=\dimen360
+\mult@nat@firstbox=\box134
+\colbreak@box=\box135
+\mc@col@check@num=\count505
 ))
 \@indexfile=\write5
-\openout5 = `Template-AJbook.idx'.
+\openout5 = `main.idx'.
 
 
-Started index file Template-AJbook
+Started index file main
+Started index file sym1
 (d:/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
 
@@ -1176,11 +1447,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (d:/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count486
+\c@section@level=\count506
 )
-\@linkdim=\dimen322
-\Hy@linkcounter=\count487
-\Hy@pagecounter=\count488
+\@linkdim=\dimen361
+\Hy@linkcounter=\count507
+\Hy@pagecounter=\count508
 
 (d:/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
@@ -1191,7 +1462,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (d:/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count489
+\Hy@SavedSpaceFactor=\count509
 
 (d:/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
@@ -1206,9 +1477,9 @@ Package hyperref Info: Plain pages OFF on input line 4192.
 Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4425.
-\c@Hy@tempcnt=\count490
+\c@Hy@tempcnt=\count510
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen323
+\XeTeXLinkMargin=\dimen362
 
 (d:/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1217,9 +1488,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count491
-\Field@Width=\dimen324
-\Fld@charsize=\dimen325
+\Fld@menulength=\count511
+\Field@Width=\dimen363
+\Fld@charsize=\dimen364
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -1232,9 +1503,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count492
-\c@Item=\count493
-\c@Hfootnote=\count494
+\Hy@abspage=\count512
+\c@Item=\count513
+\c@Hfootnote=\count514
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
@@ -1245,11 +1516,11 @@ File: hxetex.def 2023-02-07 v7.00v Hyperref driver for XeTeX
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box128
-\c@Hy@AnnotLevel=\count495
-\HyField@AnnotCount=\count496
-\Fld@listcount=\count497
-\c@bookmark@seq@number=\count498
+\pdfm@box=\box136
+\c@Hy@AnnotLevel=\count515
+\HyField@AnnotCount=\count516
+\Fld@listcount=\count517
+\c@bookmark@seq@number=\count518
 
 (d:/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -1265,173 +1536,175 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip96
+\Hy@SectionHShift=\skip98
 )
-Package hyperref Info: Option `CJKbookmarks' set `true' on input line 57.
-\@quotelevel=\count499
-\@quotereset=\count500
+Package hyperref Info: Option `CJKbookmarks' set `true' on input line 102.
+\@quotelevel=\count519
+\@quotereset=\count520
 
 (d:/texlive/2023/texmf-dist/tex/latex/ntheorem/ntheorem.sty
 Style `ntheorem', Version 1.33 <2011/08/15>
 Package: ntheorem 2011/08/15 1.33
-\theorem@style=\toks43
-\theorem@@style=\toks44
-\theorembodyfont=\toks45
-\theoremnumbering=\toks46
-\theorempreskipamount=\skip97
-\theorempostskipamount=\skip98
-\theoremframepreskipamount=\skip99
-\theoremframepostskipamount=\skip100
-\theoreminframepreskipamount=\skip101
-\theoreminframepostskipamount=\skip102
-\theorem@preskip=\toks47
-\theorem@postskip=\toks48
-\theorem@framepreskip=\toks49
-\theorem@framepostskip=\toks50
-\theorem@inframepreskip=\toks51
-\theorem@inframepostskip=\toks52
-\theoremindent=\dimen326
-\theorem@indent=\dimen327
-\theoremrightindent=\dimen328
-\theorem@rightindent=\dimen329
-\theoremheaderfont=\toks53
-\theoremseparator=\toks54
-\theoremprework=\toks55
-\theorempostwork=\toks56
-\theoremsymbol=\toks57
-\qedsymbol=\toks58
-\theoremkeyword=\toks59
-\qedsymbol=\toks60
-\thm@topsep=\skip103
-\thm@topsepadd=\skip104
+\theorem@style=\toks59
+\theorem@@style=\toks60
+\theorembodyfont=\toks61
+\theoremnumbering=\toks62
+\theorempreskipamount=\skip99
+\theorempostskipamount=\skip100
+\theoremframepreskipamount=\skip101
+\theoremframepostskipamount=\skip102
+\theoreminframepreskipamount=\skip103
+\theoreminframepostskipamount=\skip104
+\theorem@preskip=\toks63
+\theorem@postskip=\toks64
+\theorem@framepreskip=\toks65
+\theorem@framepostskip=\toks66
+\theorem@inframepreskip=\toks67
+\theorem@inframepostskip=\toks68
+\theoremindent=\dimen365
+\theorem@indent=\dimen366
+\theoremrightindent=\dimen367
+\theorem@rightindent=\dimen368
+\theoremheaderfont=\toks69
+\theoremseparator=\toks70
+\theoremprework=\toks71
+\theorempostwork=\toks72
+\theoremsymbol=\toks73
+\qedsymbol=\toks74
+\theoremkeyword=\toks75
+\qedsymbol=\toks76
+\thm@topsep=\skip105
+\thm@topsepadd=\skip106
 Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
-\c@endNonectr=\count501
-\c@currNonectr=\count502
-\mysavskip=\skip105
+\c@endNonectr=\count521
+\c@currNonectr=\count522
+\mysavskip=\skip107
 Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
  line 1175.
-\thm@amstmpdepth=\dimen330
-\tagwidth=\dimen331
+\thm@amstmpdepth=\dimen369
+\tagwidth=\dimen370
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 78.
+Package hyperref Info: Option `colorlinks' set `true' on input line 108.
  (d:/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (d:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count503
-\Gm@cntv=\count504
-\c@Gm@tempcnt=\count505
-\Gm@bindingoffset=\dimen332
-\Gm@wd@mp=\dimen333
-\Gm@odd@mp=\dimen334
-\Gm@even@mp=\dimen335
-\Gm@layoutwidth=\dimen336
-\Gm@layoutheight=\dimen337
-\Gm@layouthoffset=\dimen338
-\Gm@layoutvoffset=\dimen339
-\Gm@dimlist=\toks61
+\Gm@cnth=\count523
+\Gm@cntv=\count524
+\c@Gm@tempcnt=\count525
+\Gm@bindingoffset=\dimen371
+\Gm@wd@mp=\dimen372
+\Gm@odd@mp=\dimen373
+\Gm@even@mp=\dimen374
+\Gm@layoutwidth=\dimen375
+\Gm@layoutheight=\dimen376
+\Gm@layouthoffset=\dimen377
+\Gm@layoutvoffset=\dimen378
+\Gm@dimlist=\toks77
 )
 (d:/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip106
-\f@nch@O@elh=\skip107
-\f@nch@O@erh=\skip108
-\f@nch@O@olh=\skip109
-\f@nch@O@orh=\skip110
-\f@nch@O@elf=\skip111
-\f@nch@O@erf=\skip112
-\f@nch@O@olf=\skip113
-\f@nch@O@orf=\skip114
-)
-(./Template-AJbook.aux)
-\openout1 = `Template-AJbook.aux'.
+\f@nch@headwidth=\skip108
+\f@nch@O@elh=\skip109
+\f@nch@O@erh=\skip110
+\f@nch@O@olh=\skip111
+\f@nch@O@orh=\skip112
+\f@nch@O@elf=\skip113
+\f@nch@O@erf=\skip114
+\f@nch@O@olf=\skip115
+\f@nch@O@orf=\skip116
+) (./main.aux
+(./prelude.aux) (./chapter1.aux) (./chapter2.aux) (./appendixA.aux)
+(./appendixB.aux))
+\openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
-8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+08.
  (d:/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
-\symlegacymaths=\mathgroup6
+\symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 78.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 78.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 78.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 78.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 78.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 78.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 78.
-LaTeX Font Info:    Redeclaring math accent \check on input line 78.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 78.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 78.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 78.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 78.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 78.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 108.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 108.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 108.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 108.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 108.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 108.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 108.
+LaTeX Font Info:    Redeclaring math accent \check on input line 108.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 108.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 108.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 108.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 108.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 78.
+(Font)              `operators' in the math version `normal' on input line 108.
+
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 78.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 108.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 78.
+(Font)              `operators' in the math version `bold' on input line 108.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 78.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 108.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 78.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 108.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 78.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 108.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 78.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 108.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/TeXGyreHeros(0)/m/n on input line 7
-8.
+(Font)                  OT1/cmss/m/n --> TU/TeXGyreHeros(0)/m/n on input line 1
+08.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 78.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 108.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 78.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 108.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 78.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 108.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/TeXGyreHeros(0)/b/n on input line 
-78.
+108.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 78.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 108.
 
 (d:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1456,70 +1729,73 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `Template-AJbook.bcf'.
+\openout4 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Template-AJbook.bbl' not found.
+Package biblatex Info: ... file 'main.bbl' not found.
 
-No file Template-AJbook.bbl.
-Package biblatex Info: Reference section=0 on input line 78.
-Package biblatex Info: Reference segment=0 on input line 78.
+No file main.bbl.
+Package biblatex Info: Reference section=0 on input line 108.
+Package biblatex Info: Reference segment=0 on input line 108.
 isodate: babel.sty, (n)german.sty have not been loaded
-\c@currtheoremctr=\count506
-\c@endtheoremctr=\count507
-\c@theorem=\count508
-\c@currcorollaryctr=\count509
-\c@endcorollaryctr=\count510
-\c@currlemmactr=\count511
-\c@endlemmactr=\count512
-\c@currpropositionctr=\count513
-\c@endpropositionctr=\count514
-\c@currdefinitionctr=\count515
-\c@enddefinitionctr=\count516
-\c@currdefinition-theoremctr=\count517
-\c@enddefinition-theoremctr=\count518
-\c@currdefinition-propositionctr=\count519
-\c@enddefinition-propositionctr=\count520
-\c@currhypothesisctr=\count521
-\c@endhypothesisctr=\count522
-\c@currconjecturectr=\count523
-\c@endconjecturectr=\count524
-\c@currexamplectr=\count525
-\c@endexamplectr=\count526
-\c@currremarkctr=\count527
-\c@endremarkctr=\count528
-\c@currconventionctr=\count529
-\c@endconventionctr=\count530
-\c@currexercisectr=\count531
-\c@endexercisectr=\count532
-\c@currproofctr=\count533
-\c@endproofctr=\count534
-\c@proof=\count535
-Package hyperref Info: Link coloring ON on input line 78.
-(./Template-AJbook.out) (./Template-AJbook.out)
+\c@currtheoremctr=\count526
+\c@endtheoremctr=\count527
+\c@theorem=\count528
+\c@currcorollaryctr=\count529
+\c@endcorollaryctr=\count530
+\c@currlemmactr=\count531
+\c@endlemmactr=\count532
+\c@currpropositionctr=\count533
+\c@endpropositionctr=\count534
+\c@currdefinitionctr=\count535
+\c@enddefinitionctr=\count536
+\c@currdefinition-theoremctr=\count537
+\c@enddefinition-theoremctr=\count538
+\c@currdefinition-propositionctr=\count539
+\c@enddefinition-propositionctr=\count540
+\c@currhypothesisctr=\count541
+\c@endhypothesisctr=\count542
+\c@currconjecturectr=\count543
+\c@endconjecturectr=\count544
+\c@currexamplectr=\count545
+\c@endexamplectr=\count546
+\c@currremarkctr=\count547
+\c@endremarkctr=\count548
+\c@currconventionctr=\count549
+\c@endconventionctr=\count550
+\c@currexercisectr=\count551
+\c@endexercisectr=\count552
+\c@currproofctr=\count553
+\c@endproofctr=\count554
+\c@proof=\count555
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+Package hyperref Info: Link coloring ON on input line 108.
+(./main.out) (./main.out)
 \@outlinefile=\write6
-\openout6 = `Template-AJbook.out'.
+\openout6 = `main.out'.
 
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
 * driver: xetex
-* paper: b5paper
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside asymmetric 
-* h-part:(L,W,R)=(50.07684pt, 375.57637pt, 75.11528pt)
-* v-part:(T,H,B)=(59.18173pt, 563.36456pt, 88.7726pt)
-* \paperwidth=500.7685pt
-* \paperheight=711.3189pt
-* \textwidth=375.57637pt
-* \textheight=563.36456pt
-* \oddsidemargin=-22.19315pt
-* \evensidemargin=-22.19315pt
-* \topmargin=-56.18823pt
-* \headheight=22.04999pt
-* \headsep=21.54999pt
+* h-part:(L,W,R)=(72.2698pt, 452.96826pt, 72.2698pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96826pt
+* \textheight=674.33032pt
+* \oddsidemargin=-0.00018pt
+* \evensidemargin=-0.00018pt
+* \topmargin=-38.6317pt
+* \headheight=26.35999pt
+* \headsep=25.85999pt
 * \topskip=10.0pt
 * \footskip=25.29494pt
 * \marginparwidth=125.0pt
@@ -1535,6 +1811,96 @@ Package hyperref Info: Link coloring ON on input line 78.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+(./coverpage.tex
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 116.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <15> not available
+(Font)              size <14.4> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
+(Font)              size <7> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 116.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 116
+.
+(d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 116
+.
+
+(d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
+6.
+
+(d:/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 116.
+
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
+16.
+(d:/texlive/2023/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+
+LaTeX Font Warning: Font shape `U/stmry/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `U/stmry/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `U/stmry/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 116.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 116.
+
+File: figs/penguin.jpeg Graphic file (type bmp)
+<figs/penguin.jpeg>
+[1
+
+
+
+]
 
 Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -1579,7 +1945,50 @@ Package fontspec Info: Font family 'NotoSansCJKSC(0)' created for font 'Noto
 (fontspec)             SC/BI/OT:script=hani;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-(./Template-AJbook.toc
+
+Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
+(fontspec)                Script "CJK".
+
+File: figs/sm.pdf Graphic file (type pdf)
+<use figs/sm.pdf>
+File: ccby.png Graphic file (type bmp)
+<ccby.png>
+
+Underfull \hbox (badness 10000) in alignment at lines 146--152
+[][][]
+ []
+
+[2
+
+])
+
+Package fontspec Info: Could not resolve font "Noto Sans CJK SC Black/I" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Noto Sans CJK SC/I" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Font family 'NotoSansCJKSC(1)' created for font 'Noto
+(fontspec)             Sans CJK SC' with options
+(fontspec)             [Ligatures=TeX,Script={CJK},BoldFont={* Black}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Noto Sans CJK
+(fontspec)             SC/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Noto Sans CJK SC
+(fontspec)             Black/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Noto Sans
+(fontspec)             CJK
+(fontspec)             SC/BI/OT:script=hani;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+ (./main.toc
 
 Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -1632,94 +2041,92 @@ ext;"
 -text;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
-
-(d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
-
-
-(d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-
-])
 \tf@toc=\write7
-\openout7 = `Template-AJbook.toc'.
+\openout7 = `main.toc'.
 
- [2]
-
-Package fontspec Info: Could not resolve font "Noto Sans CJK SC Black/I" (it
-(fontspec)             probably doesn't exist).
+ [1
 
 
-Package fontspec Info: Could not resolve font "Noto Sans CJK SC/I" (it
-(fontspec)             probably doesn't exist).
+] [2
+
+]
+\openout2 = `prelude.aux'.
+
+ (./prelude.tex) [1
 
 
-Package fontspec Info: Font family 'NotoSansCJKSC(1)' created for font 'Noto
-(fontspec)             Sans CJK SC' with options
-(fontspec)             [Ligatures=TeX,Script={CJK},BoldFont={* Black}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Noto Sans CJK
-(fontspec)             SC/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Noto Sans CJK SC
-(fontspec)             Black/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Noto Sans
-(fontspec)             CJK
-(fontspec)             SC/BI/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+] [2
 
 
 
-Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
-(fontspec)                Script "CJK".
+] [3] [4]
+\openout2 = `chapter1.aux'.
 
-[1
+ (./chapter1.tex
+Chapter 1.
+) [5
 
 
 ]
+\openout2 = `chapter2.aux'.
 
-Package fontspec Warning: Font "FandolKai-Regular" does not contain requested
-(fontspec)                Script "CJK".
+ (./chapter2.tex [6
 
 
-Package fontspec Info: Font family 'FandolKai-Regular.otf(0)' created for font
-(fontspec)             'FandolKai-Regular.otf' with options
-(fontspec)             [Ligatures=TeX,Script={CJK},BoldFont={FandolKai-Regular.
-otf},ItalicFont={FandolKai-Regular.otf}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;mapping=tex
--text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;mapping=tex
--text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;mapping=tex
--text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
-[2] [3
 
-] [4]
-Chapter 1.
+]
+Chapter 2.
+) [7] [8
 
-LaTeX Warning: Citation 'ZG' on page 5 undefined on input line 117.
 
+
+] [9] [10] [11
+
+] [12]
+\openout2 = `appendixA.aux'.
+
+ (./appendixA.tex
+附录 A.
+) [13
+
+
+]
+\openout2 = `appendixB.aux'.
+
+ (./appendixB.tex [14
+
+
+
+
+]
+附录 B.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cdot' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cdot' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+[15]
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -1746,171 +2153,40 @@ ext;"
 -text;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 118.
-Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
-ut line 127.
-[5
-
-]
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 154.
+nput line 43.
+) [16]
 
+LaTeX Warning: Empty bibliography on input line 126.
 
-Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
-(fontspec)                Script "CJK".
-
-
-Package fontspec Info: Font family 'FandolHei-Regular.otf(2)' created for font
-(fontspec)             'FandolHei-Regular.otf' with options
-(fontspec)             [Ligatures=TeX,Script={CJK},BoldFont={FandolHei-Regular.
-otf}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolHei-Regular.otf]/OT:language=dflt;mapping=tex
--text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[FandolHei-Regular.otf]/OT:language=dflt;mapping=tex
--text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 159.
-[6]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 166.
-
-Package fontspec Info: Could not resolve font "Noto Sans CJK SC Medium/I" (it
-(fontspec)             probably doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "Noto Sans CJK SC/I" (it
-(fontspec)             probably doesn't exist).
-
-
-Package fontspec Info: Font family 'NotoSansCJKSC(2)' created for font 'Noto
-(fontspec)             Sans CJK SC' with options
-(fontspec)             [Ligatures=TeX,Script={CJK},BoldFont={* Medium}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Noto Sans CJK
-(fontspec)             SC/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Noto Sans CJK SC
-(fontspec)             Medium/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Noto Sans
-(fontspec)             CJK
-(fontspec)             SC/BI/OT:script=hani;language=dflt;mapping=tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
-
-Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
-line 170.
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 174.
- [7]
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 182.
- [8]
-File: ccby.png Graphic file (type bmp)
-<ccby.png>
- [9] [10
-
-] [11] [12]
-Chapter 2.
-Package hyperref Info: bookmark level for unknown convention defaults to 0 on i
-nput line 255.
-
-Underfull \vbox (badness 4096) has occurred while \output is active []
-
- [13
-
-]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 265.
-
-[14]
-File: Lanzhou.png Graphic file (type bmp)
-<Lanzhou.png>
- [15] [16
-
-]
-附录 A.
-Package hyperref Info: bookmark level for unknown definition-theorem defaults t
-o 0 on input line 340.
-[17]
-Package hyperref Info: bookmark level for unknown definition-proposition defaul
-ts to 0 on input line 352.
-Package hyperref Info: bookmark level for unknown conjecture defaults to 0 on i
-nput line 373.
-Package hyperref Info: bookmark level for unknown hypothesis defaults to 0 on i
-nput line 378.
-
-
-LaTeX Warning: Citation 'Oxl11' on page 18 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'ZG' on page 18 undefined on input line 381.
-
-[18]
-
-LaTeX Warning: Empty bibliography on input line 386.
-
-(./Template-AJbook.lof)
-\tf@lof=\write8
-\openout8 = `Template-AJbook.lof'.
-
- [19
-
-
-
-] [20
-
-] (./Template-AJbook.lot)
-\tf@lot=\write9
-\openout9 = `Template-AJbook.lot'.
-
- [21
-
-] [22
-
-]
-No file Template-AJbook-Template-AJbook.ind.
-\tf@thm=\write10
-\openout10 = `Template-AJbook.thm'.
+No file main-sym1.ind.
+No file main-main.ind.
+\tf@thm=\write8
+\openout8 = `main.thm'.
 
 
 Package imakeidx Warning: Remember to run xelatex again after calling
 (imakeidx)                `splitindex' and processing the indices.
 
-(./Template-AJbook.aux)
+(./main.aux (./prelude.aux) (./chapter1.aux) (./chapter2.aux) (./appendixA.aux)
+(./appendixB.aux))
 
-LaTeX Warning: There were undefined references.
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.6pt have occurred.
 
-Package rerunfilecheck Info: File `Template-AJbook.out' has not changed.
-(rerunfilecheck)             Checksum: 2E07A82ADB0F404AB1016E658914A74F;2371.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Template-AJbook
-(biblatex)                and rerun LaTeX afterwards.
-
-Package logreq Info: Writing requests to 'Template-AJbook.run.xml'.
-\openout1 = `Template-AJbook.run.xml'.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: CA2A65EBB025D3BE2BB2F12CE13A5716;884.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41981 strings out of 476683
- 925745 string characters out of 5807576
- 1885012 words of memory out of 5000000
- 61514 multiletter control sequences out of 15000+600000
- 527877 words of font info for 166 fonts, out of 8000000 for 9000
+ 56226 strings out of 476683
+ 1347059 string characters out of 5807576
+ 2293588 words of memory out of 5000000
+ 75460 multiletter control sequences out of 15000+600000
+ 533260 words of font info for 200 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,13n,108p,688b,1315s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,12n,108p,727b,1159s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Template-AJbook.pdf (24 pages).
+Output written on main.pdf (20 pages).
