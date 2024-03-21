@@ -1,0 +1,72 @@
+\chapter{超对称}
+\section{标准模型}
+这本质上是唯象学的内容，但是超对称的提出很大程度上就是为了寻找超出标准模型的物理。标准模型从群论上看由三个规范群描述：
+\begin{equation}
+	\mathrm{SU}(3)_\mathrm{C}\times\mathrm{SU}(2)_\mathrm{L}\times\mathrm{U}(1)_\mathrm{Y}
+\end{equation}
+传递相互作用的规范玻色子在其自伴表示下，而参与构成物质的费米子处于其基本表示下，其实这一点就很不自然，我们是从为了解释实验数据而要求费米子处于基本表示，原则上来说理论允许费米子处于任意其他表示之中。
+
+规范玻色子本身是没有质量的，但是$W^\pm/Z^0$玻色子有质量，这可以通过引入一个复标量场，Higgs，通过$\mathrm{SU}(2)_\mathrm{L}\times\mathrm{U}(1)_\mathrm{Y}\to \mathrm{U}(1)_{\mathrm{EM}}$的对称性自发破缺带来质量项，还剩下一个实标量场自由度和矢量场自由度没有破缺，它们构成Higgs粒子和光子。其它费米子质量的起源也可以通过和Higgs引入Yukawa相互作用项耦合，自发破缺后带来质量项。注意QCD中费米子quark的质量项是可以直接通过在$\mathcal{L}_{\mathrm{QCD}}$中添加正定的质量项得到，但是由于电弱规范理论是一个手征理论（注意$\mathrm{SU}(2)_\mathrm{L}$下标$L$），所以直接添加质量项会破缺手征性，质量项只能通过Higgs机制得到，详细的推导可见\href{https://yzhxxzxy.github.io/teaching/2209_SM_FR.pdf}{余钊焕老师的讲义}。也正是因为有这么个更大的群到子群的对称性自发破缺，所以电弱理论已经统一，但是QCD还单独落在外面，大统一理论（GUT）的目标就是找到更大的群如$SU(5)$，让它自发破缺到$\mathrm{SU}(2)_\mathrm{L}\times\mathrm{U}(1)_\mathrm{Y}\to \mathrm{U}(1)_{\mathrm{EM}}$，自然得到三种基本相互作用。
+\subsection{标准模型拉氏量}
+我们先给出一份网上流传甚广的“物理学最复杂公式”，也就是标准模型的Lagrangian，首先是QCD部分，动力学为：\footnote{选取规定\[D_\mu=\partial_\mu-\mathrm{i}g_\mathrm{s}G_\mu^at^a,\quad G^{a\mu\nu}\equiv\partial^\mu G^{a\nu}-\partial^\nu G^{a\mu}+g_\mathrm{s}f^{abc}G^{b\mu}G^{c\nu}\]}
+\begin{equation}
+	\begin{aligned}
+		\mathcal{L}_\mathrm{QCD}=&\sum_q\bar{q}(\mathrm{i}\gamma^\mu D_\mu-m_q)q-\frac14G_{\mu\nu}^aG^{a\mu\nu},\quad q=u,d,s,c,b,t,\quad a=1,\cdots,8\\
+		=&\sum_q[\bar{q}(\mathrm{i}\gamma^{\mu}\partial_{\mu}-m_{q})q+g_{\mathrm{s}}G_{\mu}^{a}\bar{q}\gamma^{\mu}t^{a}q]+\frac12[(\partial_{\mu}G_{\nu}^{a})(\partial^{\nu}G^{a\mu})-(\partial_{\mu}G_{\nu}^{a})(\partial^{\mu}G^{a\nu})]\\
+		&-g_{\mathrm{s}}f^{abc}(\partial_{\mu}G_{\nu}^{a})G^{b\mu}G^{c\nu}-\frac{1}{4}g_{\mathrm{s}}^{2}f^{abc}f^{ade}G_{\mu}^{b}G_{\nu}^{c}G^{d\mu}G^{e\nu}.
+	\end{aligned}
+\end{equation}
+然后需要引入FP鬼场量子化方法固定规范，还要加入两项：
+\begin{equation}
+	\mathcal{L}_{\mathrm{QCD,GF}}=-\frac1{2\xi}(\partial^{\mu}G_{\mu}^{a})^{2}
+\end{equation}
+和鬼场：
+\begin{equation}
+	\mathcal{L}_{\mathrm{QCD,FP}}=-\bar{\eta}_{g}^{a}\left(g_{\mathrm{s}}\frac{\delta G^{a}}{\delta\alpha^{c}}\right)\eta_{g}^{c}=-\bar{\eta}_{g}^{a}(\delta^{ac}\partial^{2}+g_{\mathrm{s}}f^{abc}\partial^{\mu}G_{\mu}^{b})\eta_{g}^{c}\rightarrow-\bar{\eta}_{g}^{a}\delta^{ab}\partial^{2}\eta_{g}^{a}+g_{\mathrm{s}}f^{abc}(\partial^{\mu}\eta_{g}^{a})G_{\mu}^{b}\eta_{g}^{c}.
+\end{equation}
+这里鬼场是Grassmannian。电弱规范理论就麻烦很多，自发破缺后得到真正和粒子对应的场要由自发破缺前的场通过适当的线性组合得到，这里只给最终结论。首先是希格斯机制带来的规范玻色子质量项
+\begin{equation}
+	\mathcal{L}_\mathrm{GBM}=m_W^2W^{+\mu}W_\mu^-+\frac12m_Z^2Z^\mu Z_\mu 
+\end{equation}
+然后是Yukawa耦合带来的Higgs粒子和费米子质量项：
+\begin{equation}
+	\mathcal{L}_{\mathrm{Y}}=-m_{d_i}\bar{d}_id_i-m_{u_i}\bar{u}_iu_i-m_{\ell_i}\bar{\ell}_i\ell_i-\frac{m_{d_i}}vH\bar{d}_id_i-\frac{m_{u_i}}vH\bar{u}_iu_i-\frac{m_{\ell_i}}vH\bar{\ell}_i\ell_i
+\end{equation}
+这里$i$隐含对三代quark求和。费米子和规范场之间通过协变导数项引入相互作用，或者说等价于和一堆$U(1)$的流耦合：
+\begin{equation}
+	\mathcal{L}_{\mathrm{EWF}}\supset A_{\mu}J_{\mathrm{EM}}^{\mu}+Z_{\mu}J_{Z}^{\mu}+W_{\mu}^{+}J_{W}^{+,\mu}+W_{\mu}^{-}J_{W}^{-,\mu}
+\end{equation}
+其中：
+\begin{equation}
+	\begin{gathered}
+		J_\mathrm{EM}^\mu\equiv\sum_fQ_fe\bar{f}\gamma^\mu f\\
+		\begin{aligned}J_Z^\mu&\equiv\frac g{2c_\mathrm{W}}\sum_f\bar{f}\gamma^\mu(g_\mathrm{V}^f-g_\mathrm{A}^f\gamma^5)f=\frac g{c_\mathrm{W}}\sum_f(g_\mathrm{L}^f\bar{f}_\mathrm{L}\gamma^\mu f_\mathrm{L}+g_\mathrm{R}^f\bar{f}_\mathrm{R}\gamma^\mu f_\mathrm{R})\end{aligned}\\
+		J_{W}^{+,\mu}\equiv\frac g{\sqrt{2}}(\bar{u}_{i\mathrm{L}}\gamma^{\mu}V_{ij}d_{j\mathrm{L}}+\bar{\nu}_{i\mathrm{L}}\gamma^{\mu}\ell_{i\mathrm{L}}),\quad J_{W}^{-\mu}\equiv(J_{W}^{+\mu})^{\dagger}=\frac g{\sqrt{2}}(\bar{d}_{j\mathrm{L}}V_{ji}^{\dagger}\gamma^{\mu}u_{i\mathrm{L}}+\bar{\ell}_{i\mathrm{L}}\gamma^{\mu}\nu_{i\mathrm{L}})
+	\end{gathered}
+\end{equation}
+这里$f$表示任意的费米子，$\ell$表示轻子，$u,d$表示夸克，$\nu$是中微子。$SU(2)\times U(1)$的规范场自相互作用可以由动能项：
+\begin{equation}
+	\mathcal{L}_\mathrm{EWG}=-\frac14W_{\mu\nu}^aW^{a\mu\nu}-\frac14B_{\mu\nu}B^{\mu\nu},
+\end{equation}
+来导出，注意这里的$W^a,B$都是未破缺之前的场，破缺后的场需要线性组合得到$W^{\pm}/Z^0,A^\mu$，经过贼复杂的计算后得到：
+\begin{equation}
+	\begin{aligned}
+		\mathcal{L}_{\mathrm{EWG}}= & \frac{1}{2}\left[\left(\partial_{\mu} A_{\nu}\right)\left(\partial^{\nu} A^{\mu}\right)-\left(\partial_{\mu} A_{\nu}\right)\left(\partial^{\mu} A^{\nu}\right)\right]+\frac{1}{2}\left[\left(\partial_{\mu} Z_{\nu}\right)\left(\partial^{\nu} Z^{\mu}\right)-\left(\partial_{\mu} Z_{\nu}\right)\left(\partial^{\mu} Z^{\nu}\right)\right] \\
+		& +\left(\partial_{\mu} W_{\nu}^{+}\right)\left(\partial^{\nu} W^{-\mu}\right)-\left(\partial_{\mu} W_{\nu}^{+}\right)\left(\partial^{\mu} W^{-\nu}\right)+\frac{g^{2}}{2}\left(W_{\mu}^{+} W^{+\mu} W_{\nu}^{-} W^{-\nu}-W_{\mu}^{+} W^{+\nu} W_{\nu}^{-} W^{-\mu}\right) \\
+		& +\mathrm{i} e\left[\left(\partial_{\mu} W_{\nu}^{+}\right) W^{-\mu} A^{\nu}-\left(\partial_{\mu} W_{\nu}^{+}\right) W^{-\nu} A^{\mu}-W^{+\mu}\left(\partial_{\mu} W_{\nu}^{-}\right) A^{\nu}+W^{+\nu}\left(\partial_{\mu} W_{\nu}^{-}\right) A^{\mu}\right. \\
+		& \left.\quad+W^{+\mu} W^{-\nu}\left(\partial_{\mu} A_{\nu}\right)-W^{+\nu} W^{-\mu}\left(\partial_{\mu} A_{\nu}\right)\right] \\
+		& +\mathrm{i} g c_{\mathrm{W}}\left[\left(\partial_{\mu} W_{\nu}^{+}\right) W^{-\mu} Z^{\nu}-\left(\partial_{\mu} W_{\nu}^{+}\right) W^{-\nu} Z^{\mu}-W^{+\mu}\left(\partial_{\mu} W_{\nu}^{-}\right) Z^{\nu}+W^{+\nu}\left(\partial_{\mu} W_{\nu}^{-}\right) Z^{\mu}\right. \\
+		& \left.\quad+W^{+\mu} W^{-\nu}\left(\partial_{\mu} Z_{\nu}\right)-W^{+\nu} W^{-\mu}\left(\partial_{\mu} Z_{\nu}\right)\right] \\
+		& +e^{2}\left(W_{\mu}^{+} W^{-\nu} A_{\nu} A^{\mu}-W_{\mu}^{+} W^{-\mu} A_{\nu} A^{\nu}\right)+g^{2} c_{\mathrm{W}}^{2}\left(W_{\mu}^{+} W^{-\nu} Z_{\nu} Z^{\mu}-W_{\mu}^{+} W^{-\mu} Z_{\nu} Z^{\nu}\right)\\
+		&+egc_{\mathrm{W}}(W_{\mu}^{+}W^{-\nu}A_{\nu}Z^{\mu}+W_{\mu}^{+}W^{-\nu}A^{\mu}Z_{\nu}-2W_{\mu}^{+}W^{-\mu}A_{\nu}Z^{\nu})
+	\end{aligned}
+\end{equation}
+
+把前面讨论的这一堆拉氏量全部凑在一堆就是标准模型了！但实际计算上我们不会真的取考虑全部的标准模型，往往是对一部分模型积掉实验能标上更高能的自由度得到一个有效理论，比如$\pi$介子理论，但是也够难算的了。
+\subsection{标准模型的局限}
+虽然标准模型在解释实验现象上取得了巨大的成功，但是仍有非常多的问题亟待解决，关于唯象上新物理的寻找的更多内容可见书籍\cite{baer_weak_2006}的前两章。
+\begin{description}
+	\item[参数过多] 描述
+	\item[没有引力]
+	\item[中微子震荡]
+\end{description}

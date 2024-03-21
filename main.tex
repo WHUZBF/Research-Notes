@@ -114,8 +114,11 @@
 	\part{物理}
 	\include{chapter1}
 	\include{chapter2}
+	\include{chapter3}
+	\include{chapter4}
+	\include{chapter5}
 	\part{数学}
-
+	\include{chapter1-math}
 	% 如有附录则在以下引入
 	\part{附录}
 	 \appendix
@@ -127,10 +130,10 @@
 
 
 	% 制作索引: 先是符号索引, 继而是名词索引暨英译
-	{\footnotesize
-	\printindex[sym1]
-	\indexprologue{中文术语按汉语拼音排序.}
-	\printindex
+%	{\footnotesize
+%	\printindex[sym1]
+%	\indexprologue{中文术语按汉语拼音排序.}
+%	\printindex
 %		% 如有需要, 加入表格和图片索引
 %		\cleardoublepage
 %	 	\phantomsection
@@ -140,5 +143,5 @@
 %	 	\phantomsection
 %		\addcontentsline{toc}{chapter}{\listtablename}
 %		\listoftables
-	}
+%	}
 \end{document}
