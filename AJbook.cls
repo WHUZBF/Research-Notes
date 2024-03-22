@@ -67,7 +67,7 @@
 \RequirePackage{setspace}	% 设定适于中文排版的行距
 
 % 使用 biblatex + biber 制作书目
-\RequirePackage[backend=biber, hyperref=auto, backref=true, backrefstyle=three]{biblatex}
+\RequirePackage[backend=bibtex, hyperref=auto, backref=true, backrefstyle=three]{biblatex}
 
 % 要求载入 TikZ
 \RequirePackage{tikz}

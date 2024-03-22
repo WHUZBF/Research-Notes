@@ -31,6 +31,8 @@
 	titlesetup = titles-setup.tex
 ]{AJbook}
 
+
+\usepackage[backend=bibtex, hyperref=auto, backref=true, backrefstyle=three]{biblatex}
 \usepackage{mathrsfs}
 \usepackage{stmaryrd} \SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}	% 避免警告 (stmryd 不含粗体故)
 \usepackage{array}
@@ -67,6 +69,7 @@
 % PGF plots 用于封面绘制
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
+\newcommand{\PRLsep}{\noindent\makebox[\linewidth]{\resizebox{0.3333\linewidth}{1pt}{$\bullet$}}\bigskip}% 生成PRL样式的分割线
 
 % 设置章节深度
 %\setcounter{secnumdepth}{1}
@@ -126,7 +129,7 @@
 	 \include{appendixB}
 	 \backmatter
 	% 使用 bibLaTeX 制作书目
-	\printbibliography[heading=bibintoc]
+	\printbibliography[heading=bibintoc, title=参考文献]
 
 
 	% 制作索引: 先是符号索引, 继而是名词索引暨英译
