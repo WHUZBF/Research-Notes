@@ -95,3 +95,108 @@ $\sim$表示它们作用$f$得到的值一样。这么来看原先的那个$V\ti
 在讨论群表示的时候涉及到群表示的分解，那个分解实际上就是在把群表示空间分解为一系列更小的空间的内直和，每个最小的不能再分的块就是不可约表示。在纯粹考虑矩阵理论的时候也会谈及张量积和直和的概念，矩阵的直和应该对应到内直和，而张量积就是前面讨论的张量积（把矩阵看成是线性算符，$V\otimes W$看成是$(V^*\otimes W^*)^*$），只是把前面的理论用线性算符重写了一遍，并选取了一组基底写成矩阵形式。不少文献也把矩阵的张量积叫克罗内克积。
 
 \section{Grassmann几何}
+
+\section{李超代数}
+物理人群环域模体格这些代数结构真正关心的就是群，而且很多情况下只关心它的表示，为了更好地数学上刻画李超代数，我们从环和域开始讲起。
+
+回忆群的定义，是在集合上定义了一个乘法结构，而且封闭、结合、存在幺元且元素都可逆，现在考虑把这四条性质一条条加上去。如果只有封闭性，则称为\textbf{原群(Magama)}，考虑继续加性质：
+\begin{definition}[半群与幺半群]
+	带有二元运算的非空集 $S$ 若满足结合律，则称之为\textbf{半群}.存在幺元的半群称为\textbf{幺半群(Monoid)}.若$M$ 是幺半群，而子集$M^{\prime}\subset M$ 满足 (i)$M^{\prime\prime}$ 对乘法封闭，(ii) $1\in M^{\prime}$,则称 $M^{\prime}$ 为 $M$ 的子幺半群.
+\end{definition}
+如果在幺半群的基础上加上所有元素都可逆，那就得到了群的定义。
+\begin{definition}
+	(含幺)环是一组资料 $(R,+,\cdot)$,其中
+	\begin{itemize}
+		\item [1.]$(R,+)$ 是交换群，二元运算用加法符号记作 $(a,b)\mapsto a+b$, 加法幺元记为 0, 称之为 $R$ 的加法群；
+		\item [2.]乘法运算 $\cdot:R\times R\to R$ 简记为 $a\cdot b=ab$, 满足下述性质：对所有 $a,b,c\in R$, $\diamond a( b+ c) = ab+ ac, \quad ( b+ c) a= ba+ ca\quad ( $分配律，或曰双线性$) , $
+		$\diamond\:a(bc)=(ab)c\quad($乘法结合律);
+		\item[3.]存在元素 1$\in R$ 使得对所有 $a\in R$ 皆有 $a\cdot1=a=1\cdot a$, 称作 $R$ 的 (乘法) 幺元.
+	\end{itemize}
+		后面两点其实蕴含了$(R,\cdot)$是一个幺半群。除去和幺元相关性质得到的$(R,+,\cdot)$ 称作无幺环. 若子集 $S\subset R$ 对 $(+,\cdot)$ 也构成环， 并且和 $R$ 共用同样的乘法幺元 1,则称 $S$ 为 $R$ 的子环，或称 $R$ 是 S 的环扩张或扩环.
+\end{definition}
+\begin{example}
+	后面用的比较多的是$\mathbb{Z}_n$环，它的元素由整数关于$n$的模得到，比如$\mathbb{Z}_2=\{\bar 0,\bar 1\}$，加法和乘法就是自然数的加法乘法取模$n$。全体整数也构成一个环，称为自由环$\mathbb{Z}$。
+\end{example}
+\begin{definition}
+	域是一组资料$(K,+,\cdot)$，其中
+	\begin{itemize}
+		\item [1.]$(R,+)$ 是交换群；
+		\item [2.]$(R,\cdot)$ 是交换群；
+		\item [3.]$\forall a,b,c\in K,a\cdot (b+c)=a\dot b+a\dot c$.
+	\end{itemize}
+	这个定义和环颇有些相似，实际上域可以看作是环上的乘法幺半群附加交换性，这时候环变成一个\textbf{交换环}，再要求乘法意义上环中除了加法零元每个元素都有逆，这环变成\textbf{除环（体）}。\textbf{域就是一个交换可除环}。
+\end{definition}
+简单点说就是一个集合上面定义了加减乘除，满足通常的结合律、交换律和分配律等等。但是有一个地方和小学学的数域有点不一样，若干个相同的不为0的数求和可以为0。比如$\mathbb{Z}_2$也可以看作一个域，其中$\bar 1+\bar 1=\bar 0$！
+\begin{definition}
+	一个域只可能出现两种情况：
+	\begin{description}
+		\item[特征$0$：] 任何元自己和自己加法无论多少次都不会得到零元（零元自己除外）；
+		\item[特征$p$：] $\exists p\in\mathbf{Prime}$满足任何数自己和自己相加$p$次后总是得到零元。
+ 	\end{description}
+\end{definition}
+后面的讨论在特征为$0$的域上进行。
+
+回忆李代数首先是一个代数，生活在一个线性空间，李超代数首先是一个超代数，和代数的区别是其生活在阶化之后的线性空间上。
+\begin{definition}[$Z_n$阶化向量空间]
+	若一个向量空间可以直和分解为$V=\bigoplus_{\alpha\in\mathbb{Z}_n}V_\alpha$，则称$V$为$Z_n$阶化向量空间。$V_\alpha$子空间中的元素称为$\alpha$阶齐次元。
+\end{definition}
+这个定义只要求这样的分解存在就行，并不需要搞清楚$V_\alpha$到底谁是谁。
+\begin{theorem}
+	若$V,W$都是$Z_n$阶化向量空间则它们上面的线性算子$\mathscr{L}(V,W)$也是一个$Z_n$阶化向量空间。张量积空间亦然。
+\end{theorem}
+考虑$V$上的双线性函数$f:V\times V\to K$，可以有下面几种形式：
+\begin{description}
+	\item[相容的：]$\forall x\in V_\alpha,y\in V_\beta,f(X,y)\propto\delta_{\alpha\beta}$
+	\item[超对称的：]$\forall x\in V_\alpha,y\in V_\beta,f(X,y)=(-1)^{\alpha\cdot\beta}f(y,x)$
+	\item[反超对称的：]$\forall x\in V_\alpha,y\in V_\beta,f(X,y)=-(-1)^{\alpha\cdot\beta}f(y,x)$
+\end{description}
+\begin{definition}
+	超代数是一个$\mathbb{Z}_2$阶化的代数
+\end{definition}
+原先的李代数的代数乘法只有对易子，现在李超代数的目的就是把反对易子也加进来，而前面先定义阶化的目的就是分清楚哪些元素之间反对易关系，哪些之间是对易关系。
+\begin{definition}
+	李超代数是一个超代数，且乘法$(\cdot,\cdot)$满足:
+	\begin{itemize}
+		\item[双线性：] $(\alpha,k_1\beta_1+k_2\beta_2)=k_1(\alpha,\beta_1)+k_2(\alpha,\beta_2)\quad(k_1\alpha_1+k_2\alpha_2,\beta)=k_1(\alpha_1,\beta)+k_2(\alpha_2,\beta)$
+		\item[阶化反对易：]$\forall x\in V_\alpha,y\in V_\beta,(x,y)=-(-1)^{\alpha\cdot\beta}(y,x)$
+		\item[阶化Jacobi恒等式：]$\forall x\in V_\alpha,y\in V_\beta,\left((x,y),z\right)=\left(x,(y,z)\right)-(-1)^{\alpha\cdot\beta}\left(y,(x,z)\right)$
+	\end{itemize}
+\end{definition}
+
+超代数是代数直接阶化，但是李超代数并非直接把李代数阶化。和李代数一样，李超代数的李超括号可以直接由超代数的乘法诱导：
+$$[x,y]=xy-yx,\quad\{x,y\}=xy+yx$$
+超李代数的生成元分为两组$x_i\in\mathfrak{g}_{\bar 0},y_\alpha\in\mathfrak{g}_{\bar 1}$，则对易关系可以写为：
+\begin{equation}
+	[x_i,x_j]=f^k_{ij}x_k,\quad [x_i,y_\alpha]=F^\beta_{i\alpha}y_\beta,\quad \{y_\alpha,y_\beta\}=A^i_{\beta\alpha}x_i
+\end{equation}
+且结构常数满足：
+\begin{equation}
+	f^k_{ij}=-f^k_{ji},\quad F^\beta_{i\alpha}=-F^\beta_{\alpha i},\quad A^i_{\beta\alpha}=A^i_{\alpha\beta}
+\end{equation}
+
+实际物理上考虑的是它们的射影表示，所以就跟CFT里面的Virasoro代数一样可以有个中心扩张。虽然Poincar\'e代数的中心扩张总可以消除，但是超Poincar\'e代数在$\mathcal{N}>1$时可以有非平庸的中心荷。李超代数的中心扩张定义和李代数完全一致，只是$c$和其他生成元不是对易，而是超对易，也就是$(c,x)=0,\forall x\in\mathfrak{g}$。
+
+\begin{example}[一般线性李超代数]
+	李代数比较重要的是考虑其到$\mathfrak{gl}(n)$的子代数的同态，也就是考虑其线性表示。李超代数这边同样也会考虑表示，这个时候对应的是$\mathfrak{pl}(m,n)$的子代数。考虑任意一个$\mathfrak{gl}(m+n)$中的元素，在某个基底下：
+	\begin{equation}
+		\begin{pmatrix}A_{m\times m}&B_{m\times n}\\C_{n\times m}&D_{n\times n}\end{pmatrix}=\begin{pmatrix}A_{m\times m}&0\\0&D_{n\times n}\end{pmatrix}+\begin{pmatrix}0&B_{m\times n}\\C_{n\times m}&0\end{pmatrix}
+	\end{equation}
+	这实际上就已经把$\mathfrak{gl}(m+n)$进行了$\mathbb{Z}_2$阶化，分块对角的是$\mathfrak{pl}(m,n)_{\bar 0}$，斜分块对角的是$\mathfrak{pl}(m,n)_{\bar 1}$。然后在矩阵乘法诱导的$[,]$和$\{\}$下构成李超代数。注意到对于同样一个$\mathfrak{gl}(m+n)$，可以有不同的$\mathbb{Z}_2$阶化方法，所以对于李超代数线性表示空间的维数需要用两个指标$m,n$来标记。
+	
+	常常对于$\mathfrak{pl}(m,n)$中的元素定义超迹：
+	\begin{equation}
+		\mathrm{str}\  x\equiv\tr A-\tr D
+	\end{equation}
+	它与基底选取无关，而且超迹自然诱导出一个$\mathfrak{pl}(m,n)\times\mathfrak{pl}(m,n)\to K$的双线性$\left<x,y\right>\equiv\mathrm{str}\ (xy)$，而且它是相容的，还是不变的，也就是说$\left<(x,y),z\right>=\left<x,(y,z)\right>$。超对易子的超迹必然是0，$\mathrm{str}\ (x,y)=0$。利用超迹还可定义出$\mathfrak{pl}(m,n)$的子代数$\mathfrak{spl}(m,n)\equiv\{x\in\mathfrak{pl}(m,n)|\mathrm{str}\ x=0\}$
+\end{example}
+
+
+李超代数和李代数有许多相似之处，比如同样可以定义单李超代数，可以考虑上面的Killing型和伴随表示，还可以考虑典型代数，用Dykin图和Cartan子代数方法找最高权表示或是对单李超代数进行分类。但是它又有不少不同点需要注意，比如Schur引理不再成立：
+\begin{theorem}[超Schur引理]
+	设$\rho:\mathfrak{g}\longrightarrow\mathfrak{pl}(V)$是李超代数的一个不可约表示，则与全部 $\rho(\mathfrak{g})$ 可超交换的线性变换，
+	$$C(\rho)=\{a\in pl(V)|(a,p(\mathfrak{g}))=0\}$$
+	只可能是 $C(\rho)=cI$, 或
+	\[C(\rho)=c\begin{pmatrix}I_{n\times n}&b\\b^{-1}&I_{n\times n}\end{pmatrix},\quad c\in K\]
+	这种情况要求$n=\dim V_{\bar 0}=\dim V_{\bar 1}$
+\end{theorem}
+再比如李代数的李定理也不再成立。更多有关李超代数表示论的内容请见\cite{superlie,WLXJ198301002,Kac:1977em}。
