@@ -94,7 +94,90 @@ $\sim$表示它们作用$f$得到的值一样。这么来看原先的那个$V\ti
 
 在讨论群表示的时候涉及到群表示的分解，那个分解实际上就是在把群表示空间分解为一系列更小的空间的内直和，每个最小的不能再分的块就是不可约表示。在纯粹考虑矩阵理论的时候也会谈及张量积和直和的概念，矩阵的直和应该对应到内直和，而张量积就是前面讨论的张量积（把矩阵看成是线性算符，$V\otimes W$看成是$(V^*\otimes W^*)^*$），只是把前面的理论用线性算符重写了一遍，并选取了一组基底写成矩阵形式。不少文献也把矩阵的张量积叫克罗内克积。
 
+总结一下，这一节定义$V\otimes W$的目的就是把$V\times W$上的双重线性映射提升为新的空间$V\otimes W$上的线性映射来研究。而且$V\otimes W$的本质其实就是$\mathscr{L}(V^*,W^*,F)$，也就是对偶空间上的双重线性泛函，这一点可以从下面的等式看出来：
+\begin{equation}
+	V\otimes W\cong \mathscr{L}\left((V\otimes W)^*,F\right)\cong\mathscr{L}\left(V^*\otimes W^*,F\right)\cong\mathscr{L}(V^*,W^*,F)
+\end{equation}
+牢记这一本质，我们可以把$V\otimes W$具体构造出来。首先对于$f\in V^*,g\in W^*$，可以定义这两个线性泛函的张量积为：
+\begin{equation}
+	(f\otimes g)(v,w)\equiv f(v)\cdot g(w)
+\end{equation}
+不难发现通过张量积$\otimes$运算，我们从$V,W$中的线性泛函出发得到了一个$V\times W\to F$的双重线性泛函，也就是$V^*\otimes W^*$中的一个元素。同样，假设$V$的基底为$\{e_i|i\in I\}$，$W$的基底为$\{f_j|j\in J\}$，把他们看成是$V^*$和$W^*$中的线性泛函，那么$V\otimes W$的基底就可以构造为：
+
+\begin{equation}
+	V\otimes W=\mathrm{span} \left\{e_i\otimes f_j|(i,j)\in I\times J\right\}
+\end{equation}
+这样我们就找到了$h:V\times W\to V\otimes W$。我们这里都是集中在两个线性空间的基础上讨论，这一构造可以轻易推广到有限个向量空间的张量积上面去，而且不难证明满足结合律，$V\otimes W\otimes Z$是良定义的。
+
 \section{Grassmann几何}
+\subsection{外代数}
+接着上面一节继续讨论，前面的张量积空间对任意向量空间$V,W$都是可以进行构造的，现在我们把范围搞窄一点，假设只考虑$V$和他的对偶$V^*$构成的张量积空间：
+\begin{definition}[$(r,s)$阶张量空间]
+	\begin{equation}
+	V^r_s=\underbrace{V\otimes\cdots \otimes V}_{r}\otimes \overbrace{V^*\otimes\cdots \otimes V^*}^{s}
+\end{equation}
+这称为$(r,s)$阶张量空间，其中的$r$叫逆变阶数，$s$叫协变阶数。特别地定义$V^0_0\equiv F$
+\end{definition}
+\begin{remark}
+	实际上这些$V,V^*$完全可以交替排列，不过我们总可以让他们排列成这样整齐的方式便于记号书写方便。
+\end{remark}
+
+再来解释一下为什么要叫逆变反变，根据前面说的，我们记$V=\{e_i\},V^*=\{e^{*j}\}$，那么$V^r_s$中的任意一个向量都可以展开为下面的形式：
+\begin{equation}
+	x=x^{i_1,\ldots,i_r}_{j_1,\ldots j_s}e_{i_1}\otimes\cdots \otimes e_{i_r}\otimes e^{*j_1}\otimes\cdots \otimes e^{*j_s}
+\end{equation}
+\begin{remark}
+	注意一上一下表示求和，不但能帮助我们分清求和指标，还能帮我们分清协变逆变。
+\end{remark}
+
+由于$V$中基底$\{e_i\}$的选取是完全任意的，可以差一个线性变换，对应的$\{e^{*j}\}$的选取也就可以差个线性变换，而且是对应的逆矩阵，$x$本身在基底变换下是绝对的，但是其在不同基底下的分量会差个线性变换，可以证明如果选取${A_i}^je_j$作为新基底，$x^i$会利用$A$的逆矩阵变换，所以对应$V$的基底$e_{i}$叫逆变的（尽管本身$e_{i}$用$A$来变）；同样的$x_j$会利用$A$矩阵本身来变换，所以对应$V^*$的基底$e^{*j}$叫协变的（尽管本身$e^{*j}$用$A^{-1}$来变）。
+
+$V^r_s$中的元素除了可以用张量积运算生成更大的张量以外，还可以利用缩并这个运算生成更小的张量，数学上严格定义为：
+\begin{definition}[缩并]
+	张量$x$的缩并定义为：
+	\begin{equation}
+		\begin{aligned}C_{\lambda\mu}(x)=\langle v_{\lambda},v^{*\mu}\rangle v_{1}\otimes\cdots\otimes\hat{v}_{\lambda}\otimes\cdots\otimes v_{r},\\\otimes v^{*1}\otimes\cdots\otimes\hat{v}^{*\mu}\otimes\cdots\otimes v^{*s},\end{aligned}
+	\end{equation}
+	其中$\hat{}$表示去掉这个因子。
+\end{definition}
+不过物理人口中更关心张量的分量，而不是其本身，毕竟分量是用来真正做计算的，那么缩并其实就是把某个上指标和某个下指标去成一样的然后求和，类似于矩阵取trace。
+
+无论是缩并还是张量积，最终得到的元素都不会在原空间里面，这引导我们去利用直和构造Fock空间一样来构造更加大的空间，使得这些运算是封闭的。我们现在只考虑$V^r_0$或$V_s^0$，也就是不考虑$V$和$V^*$的混合：
+\begin{definition}[张量代数]
+	由所有$T^r(V)\equiv V^r_0(r\geq 0)$的直和构成的空间记为：
+	\begin{equation}
+		T(V)\equiv \bigoplus_{r=0} V^r_0
+	\end{equation}
+	显然这个空间没有缩并运算，但是在张量积运算下是封闭的，构成了一个代数，称为\textbf{张量代数}。
+\end{definition}
+
+$T^r$空间作为线性空间可以考虑两类子空间，考虑下面两个投影算子：
+\begin{equation}
+	\begin{gathered}
+		S_{r}(x)={\frac{1}{r!}}\sum_{\sigma\in{\mathfrak{ S}_r}}\sigma{x}, \\
+		A_{r}(x)={\frac{1}{r!}}\sum_{\sigma\in{\mathfrak{ S}_r}}\operatorname{sgn}\sigma\cdot\sigma x 
+	\end{gathered}
+\end{equation}
+这里$\mathfrak{S}_r$表示$r$阶置换群，上面的两个算子把$T^r(V)$分别投影到全体全对称张量的集合$P^r(V)$和全反对称张量的集合$\Lambda^r(V)$。从指标上看就是那些全对称和全反对称的张量构成的向量空间。显然这个时候如果继续把$P_r(V)$或者$\Lambda^r(V)$直接对所有$r$直和起来的空间在张量积运算下并不构成一个代数，所以要对乘法进行修正，下面具体来考虑反对称部分。
+\begin{remark}
+	约定$\Lambda^{1}(V)=V,\Lambda^{0}(V)=F$。
+\end{remark}
+\begin{definition}[外积]
+	\begin{equation}
+		\xi\wedge\eta=\frac{(k+l)!}{k!l!}A_{k+l}(\xi\otimes\eta),\quad\xi\in\Lambda^k(V),\eta\in\xi\in\Lambda^l(V)
+	\end{equation}
+	其中$A_{k+l}$是前面定义的反对称化算子。不难验证$\xi\wedge\eta\in\Lambda^{k+l}(V)$。
+\end{definition}
+外积运算有如下性质：
+\begin{itemize}
+	\item 分配律：
+	\[(\xi_{1}+\xi_{2})\wedge\eta=\xi_{1}\wedge\eta+\xi_{2}\wedge\eta,\quad \xi\wedge(\eta_{1}+\eta_{2})=\xi\wedge\eta_{1}+\xi\wedge\eta_{2}\]
+	 \item 反变换律：$\xi\wedge\eta=(-1)^k\eta\wedge\xi$ 
+	\item 结合律：($\xi\wedge\eta)\wedge\xi=\xi\wedge(\eta\wedge\zeta)$.
+\end{itemize}
+\begin{definition}[外代数]
+	在上面外积的定义下\[\Lambda(V)\equiv\bigoplus_{r=0}\Lambda^r(V)\]构成一个代数，称为\textbf{外代数}，或\textbf{Grassmann代数}。
+\end{definition}
 
 \section{李超代数}
 物理人群环域模体格这些代数结构真正关心的就是群，而且很多情况下只关心它的表示，为了更好地数学上刻画李超代数，我们从环和域开始讲起。
@@ -200,3 +283,7 @@ $$[x,y]=xy-yx,\quad\{x,y\}=xy+yx$$
 	这种情况要求$n=\dim V_{\bar 0}=\dim V_{\bar 1}$
 \end{theorem}
 再比如李代数的李定理也不再成立。更多有关李超代数表示论的内容请见\cite{superlie,WLXJ198301002,Kac:1977em}。
+\section{切矢，微分，子流形和Frobenius定理}
+这些都是微分几何最基础的概念，物理人一般就是凭感觉去定义，这种定义方式一般没问题，我们来看数学人是怎么严格理解这件事情的。为此首先看物理人是如何定义的，引入\href{https://www.damtp.cam.ac.uk/user/tong/gr.html}{David Tong}讲义上面的讲法。
+\subsection{切矢和微分}
+
