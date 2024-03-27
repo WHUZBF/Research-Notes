@@ -287,3 +287,111 @@ $$[x,y]=xy-yx,\quad\{x,y\}=xy+yx$$
 这些都是微分几何最基础的概念，物理人一般就是凭感觉去定义，这种定义方式一般没问题，我们来看数学人是怎么严格理解这件事情的。为此首先看物理人是如何定义的，引入\href{https://www.damtp.cam.ac.uk/user/tong/gr.html}{David Tong}讲义上面的讲法。
 \subsection{切矢和微分}
 
+\section{中心极限定理与随机矩阵模型}
+本节说白了就是在玩$0+0$维的量子场论，为讨论大$N$极限做准备。
+\subsection{一些关于概率论的常识}
+下文中我们用大写字母表示随机变量，用对应的小写字母表示随机变量的取值，后面讨论的都是连续型随机变量。
+
+设随机变量的PDF（概率密度函数）为$p(x)$，定义其特征函数为傅里叶变换：
+\begin{equation}
+	\widehat{p}(k)=\langle e^{ikX}\rangle=\int dxe^{ikx}p(x)
+\end{equation}
+利用它在$k=0$处做形式幂级数可以得到：
+\begin{equation}
+	\begin{gathered}
+		\widehat{p}(k)=1+\sum_{n=1}^{+\infty}\frac1{n!}(ik)^nM_n\\
+		M_n=\langle X^n\rangle=\int dxx^np(x)=\left.\left(\frac{\partial}{i\partial k}\right)^n\widehat{p}(k)\right|_{k=0}
+	\end{gathered}
+\end{equation}
+还有一个很有用的概念叫cumulants，或者说叫集团（cluster）n阶矩$K_n$：
+\begin{equation}
+	\widehat{p}(k)=\exp\left(\sum_{n=1}^{+\infty}\frac1{n!}(ik)^nK_n\right)
+\end{equation}
+实际计算中需要计算$M_n$，也就是n点关联函数，可以把他表示成集团的和的形式：
+\begin{equation}
+	\begin{aligned}M_1&=K_1,\\M_2&=K_2+K_1^2,\\M_3&=K_3+3K_1K_2+K_1^3,\\M_4&=K_4+4K_3K_1+3K_2^2+6K_2K_1^2+K_1^4\end{aligned}
+\end{equation}
+所以求关联函数归结为求cumulants，而且上面的公式也可以用图的形式表示出来。比如$M_3$：
+\begin{figure}[H]
+	\centering
+	\includegraphics{figs/fig1.pdf}
+\end{figure}
+用圈圈起来的代表一个cluster，里面n个球就代表是$K_n$，最终结果就是把所有的分组方法对应的图加起来，每个图又是集团的乘积。这其实就是在考虑n个不同的球如何用完全一样的盒子进行分类（容量相同的视为完全相同的盒子，不同容量盒子依旧不同）。
+
+现在考虑$N$个独立同分布的随机变量$\{X_i\}$，且设$X=\sum_{i=1}^N X_i$，那么$X$的PDF就可以表达为：
+\begin{equation}
+	\begin{aligned}
+		q(x)&=\int[\prod_idx_i]\delta(x-\sum_ix_i)p(x_1)p(x_2)...p(x_N)\\
+		&=\int\frac{dk}{2\pi}e^{-ikx}\int[\prod_idx_i]e^{ik\sum_ix_i}p(x_1)p(x_2)...p(x_N) \\
+		&=\int\frac{dk}{2\pi}e^{-ikx}[\int dx'e^{ikx'}p(x')]^N \\
+		&=\int\frac{dk}{2\pi}e^{-ikx}\widehat{p}^N(k)
+	\end{aligned}
+\end{equation}
+利用特征的定义，设随机变量的方差为$\sigma$，平均值为$\mu$，则有：
+\begin{equation}
+	\widehat{p}(k)=\exp\left(ik\mu-\frac12k^2\sigma^2+....\right)
+\end{equation}
+则最终得到：
+\begin{equation}
+	q(x)=\int\frac{dk}{2\pi}e^{-ik(x-N\mu)-N\frac12\sigma^2k^2+N\mathcal{O}(k^3)}
+\end{equation}
+N有限时这个式子很复杂，但是积分换元把$Nk$当整体，不难发现$N\to infty$后上式中的$\mathcal{O}(k^3)$完全可以丢掉得到：
+\begin{equation}
+	q(x)\to\frac1{\sqrt{2\pi N}\sigma}\operatorname{exp}(-\frac12\frac{(x-N\mu)^2}{N\sigma^2})
+\end{equation}
+这正是中心极限定理说的事情，这也让我们第一次看到了很多理论在取$N\to\infty$后反倒会变得简单。
+
+\subsection{$0+0$维QFT}
+我们的讨论从上一节简化后的大N极限下的情况开始，假设$\mu=0$，这个时候随机变量$\Phi$遵从高斯分布：
+\begin{equation}
+	P(\phi)=\frac1{\mathcal{Z}}\operatorname{exp}(-\frac12m^2\phi^2)
+\end{equation}
+这里$\mathcal{Z}$是归一化系数，遵从统计力学的术语，我们叫他配分函数。但是真正能用于计算的配分函数定义是$P(\phi)$的特征：
+\begin{equation}
+	\begin{aligned}\mathcal{Z}[J]&=\frac{1}{\mathcal{Z}}\int d\phi\exp(-\frac{1}{2}m^2\phi^2+iJ\phi)\\&=\exp(-\frac{1}{2}\frac{J^2}{m^2}).\end{aligned}
+\end{equation}
+显然$\mathcal{Z}=\mathcal{Z}[J=0]$，这其实就相当于把PDF形变一下，加一个流$J$，我们一般把这个叫\textbf{配分函数}\footnote{或者按照高维QFT的叫法叫\textbf{生成泛函}}。按照前面的讨论，只需要把这个配分函数在$J=0$处做形式幂级数就能得到任意点关联函数，对于高斯情况配分函数可以严格计算出来，所以很简单可以得到：
+\begin{equation}
+	M_{2n+1}=0,\quad M_{2n}=\frac{(2n)!}{n!2^n}\frac1{m^{2n}}
+\end{equation}
+
+真实世界的概率模型不可能是如此简单的高斯分布，但是一般非高斯的我们又不会解，退而求其次，我们考虑一个小扰动：
+\begin{equation}
+	P(\phi)=\frac1{\mathcal{Z}[g]}\exp(-\frac12m^2\phi^2-\frac1{4!}g\phi^4),\quad g\ll 1
+\end{equation}
+
+即使是如此简单的扰动就算是计算归一化系数都很困难。注定只能做微扰展开求解，也就是把最终答案写成关于$g$的幂级数。这其实涉及到收敛半径这一比较微妙的问题，高维QFT比如QED,QCD这些模型，展开半径都是0！微扰展开实际上只能理解为渐近展开！但是我们考虑的$0+0$维QFT其实就是微扰方法算一元函数积分，我们不需要care所谓非微扰效应，圈图发散，重整化这些玩意儿。但是这个玩具模型能很好地帮助理解费曼图是怎么来的。
+
+考虑生成泛函：
+\begin{equation}
+	\mathcal{Z}[g,J]=\frac1{\mathcal{Z}[g]}\int d\phi\exp(-\frac12m^2\phi^2-\frac1{4!}g\phi^4+iJ\phi)
+\end{equation}
+显然$\mathcal{Z}[g]=\mathcal{Z}[g,J=0]$，如果微扰地计算出了这个函数。那么直接根据$M_n=\left(\frac{\partial}{i\partial J}\right)^n\mathcal{Z}[g,J=0]$就可以得到任意阶关联函数的微扰解。我们记未受到扰动的Gauss型随机变量的配分函数为$\mathcal{Z}_0[J]$：
+\begin{equation}
+	\mathcal{Z}_0[J]\equiv \int d\phi \exp(-\frac{1}{2}m^2\phi^2+iJ\phi)
+\end{equation}
+\begin{remark}
+	注意这里定义丢掉了归一化因子$\mathcal{Z}$。
+\end{remark}
+则：
+\begin{equation}
+	\mathcal{Z}[g,J]=\frac{1}{\mathcal{Z}[g]}\exp\left[-\frac1{4!}g\left(\frac{\partial}{i\partial J}\right)^4\right]\mathcal{Z}_0[J]
+\end{equation}
+虽然$\mathcal{Z}_0[J]$可以严格求解，但是我们还是写下他的级数形式，将上面的配分函数写为：
+\begin{equation}
+	\mathcal{Z}[g,J]=\frac1{Z[g]}\sum_{V=0}^{\infty}\frac{1}{V!}\left[\frac{1}{4!}{-g}\left(\frac{\partial}{\partial J}\right)^4\right]^V\times \sum_{P=0}^{\infty}\frac{1}{P!}\left[\frac12 (-J)\frac{-1}{m^2}(-J)\right]
+\end{equation}
+我们对因子的$-1$相位进行了合理排布，没那么神秘，只是为了后面计算稍微方便一些，正统QFT，这些相位不是以$-1$给出，而是以$i$的形式给出。费曼图也没那么神秘，无非就是现在想算这个配分函数，每次都一项项展开分析太麻烦了，然后就想了个办法把这些求和中的项用图的形式写出来而已。\footnote{严格来说是费曼图的毛胚版本，正统的费曼图要cut掉外源得到关联函数，然后用LSZ公式使外线在壳，最后发现动量守恒只有那些连通图有贡献，那些图再用波浪线表示光子，实线表示费米子等等美化记号，就得到了通常我们看到的费曼图。}
+
+首先看下求和里面有些啥，首先有$J$，而且很容易求出剩下$E=2P-4V$个，这也直接给出限制$E\geq 0$。其次有$\frac{-1}{m^2}$和$-g$，而且一个$-g$的出现总是意味着四个$-1/m^2$，还有一个归一化因子$\mathcal{Z}[g]$，我们先不管它。这样我们就得到了三个拼图：
+\begin{figure}[H]
+	\centering
+\end{figure}
+
+唯一要做的事情就是把这些拼图拼起来得到一个闭合的图，所谓闭合，我的意思是说顶点和源或者源和源之间都用传播子粘好了，不存在还剩下半截传播子露在外面的情况，图是连通的还是非连通的倒无所谓。首先从符号上我们知道应该有$(-1)^{P-V}$因子，用这些拼图拼好的闭合的图正好有这样的因子。还有一个问题是为啥引入微扰的时候系数要加个$1/4!$，这也不神秘，首先注意到$V$个顶点$P$个传播子的项数理论上来说由$\partial/\partial J$湮灭$J$的方式决定，总共有$(2P)!/(2P-4V)!$种不同的湮灭方式，不过这里绝大部分所对应的图的拓扑结构都是一样的，也就会对应一样的代数项，当然也有拓扑结构不一样的，所以微扰展开里面的每一项都要用几个拓扑结构不同的图来表示，也就是那些所有具有$P$个传播子，$V$个顶点的图。那些拓扑结构相同的图我们当然只用画一次，然后在前面乘上个系数就好，但是我们并不希望这个系数特别大，即使是泰勒展开前面就有的系数也不能完全把他们消除为1，所以我们预先在$\phi^4$前面乘上了一个$1/4!$。但是事与愿违，这还是不能保证每个图前面的系数都为$1$，但是幸运的是，这个系数只和图的拓扑结构有关，有系统的方法数出来，只是数起来非常麻烦罢了。我这里不打算讲怎么数这些不同的\textbf{对称因子}，\href{https://person.zju.edu.cn/yuan}{袁野老师的讲义}上写的很清楚，关于$\phi^4$理论，文献\cite{Palmer:2001vq}中还给出了公式。
+
+继续发挥注意力，注意到求关联函数的时候要对配分函数关于$J$求导，所以$n$点函数肯定不会有$E<n$的贡献，而且最后还要取$J=0$，$E>n$的贡献也没有，所以我们只需要画出那些$E=n$的图。图是正必须$g^V$的，所以从微扰论角度看我们只需要画出少顶点的图。但即使是这样图原则上来说也有无限多，我们画出$V\leq 2$的前面几个，对称因子已经写出来了：
+\begin{figure}[H]
+	\centering
+\end{figure}
+
