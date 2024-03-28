@@ -448,3 +448,207 @@ N有限时这个式子很复杂，但是积分换元把$Nk$当整体，不难发
 	常用的那些模型大家都帮你把费曼规则给弄出来了。但是这些费曼规则会非常复杂，要求和的图也非常多，所以现代微扰量子场论（pQFT）重要分支——散射振幅的目标就是脱离费曼图，直接从拉氏量出发，甚至从理论的一些基本假设出发bootsrap出散射振幅。
 \subsection{随机矩阵模型}
 再来看一个$0+0$维量子场论的例子，随机矩阵模型，他的大N极限形式和QCD的非常相似。
+
+随机矩阵模型就是把一堆矩阵作为系综，比如我们下面考虑$N\times N$的厄米矩阵，矩阵作为随机变量的概率分布为：
+\begin{equation}
+	P(\phi)=\frac1{\mathcal{Z}}\exp{(-N\text{Tr}V(\phi))}
+\end{equation}
+假设现在不断地从矩阵空间中选取一个矩阵，选完之后记录下它的特征值，随着选取的矩阵数目越来越多，画出的特征值分布的柱状图越来越趋近于一个光滑曲线$\rho_N(E)$，显然这个PDF可以严格定义为：
+\begin{equation}
+	\rho_N(E)=\frac1N\langle\text{Tr}\delta(E-\Phi)\rangle=\frac1N\langle\sum_i\delta(E-E_i)\rangle 
+\end{equation}
+下面我们就是要研究随着$N\to\infty$，$\rho_N(E)$将趋近于怎样的一个函数。定义：
+\begin{equation}
+	G(z)=\frac1N\left\langle\text{Tr}\frac1{z-\Phi} \right\rangle
+\end{equation}
+然后利用数学公式：
+\begin{equation}
+	\operatorname*{lim}_{\epsilon\to0}\operatorname{Im}(\frac{1}{x+i\epsilon})=-\pi\delta(x)
+\end{equation}
+得到：
+\begin{equation}
+	\rho(E)=-\frac 1\pi\lim_{\epsilon\to0}\operatorname{Im}G(E+i\epsilon)
+\end{equation}
+为了进一步简化计算，我们先来看一下矩阵空间的测度$[d\phi]$。可观测量$\Tr\left(\mathcal{O}(\phi)\right)$利用概率分布计算式为：
+\begin{equation}
+	\langle\mathrm{Tr}(\mathcal{O}(\phi))\rangle=\frac1{\mathcal{Z}}\int[d\phi]\mathrm{Tr}(\mathcal{O}(\phi))e^{-N\mathrm{Tr}V(\phi)}
+\end{equation}
+可以把测度自然的定义为$[d\phi]\equiv\prod_{p,q}d\phi^p_q$，这个测度在幺正变换下是不变的，而且幺正变换下$P(\phi)$和$\Tr\left(\mathcal{O}(\phi)\right)$都不变，所以整个理论是具有$SU(N)$对称性的。我们改写一下测度使其更明显一些，考虑把测度中的每个$\phi$用某个幺正矩阵$U$对角化为$\Lambda=\mathrm{diag}(\lambda_1,\ldots,\lambda_N)$，则测度一定可以重写为：\footnote{这一节我把它放在了数学附录，但实际上处理的方法优势物理学家所习惯的，但讨论的确确实实又只是数学问题。}
+\begin{equation}
+	\langle\mathrm{Tr}(\mathcal{O}(\phi))\rangle=\frac1{\mathcal{Z}}\int_{SU(N)}[dU]\int J\prod_id\lambda_i\sum_j(\mathcal{O}(\lambda_j))e^{-N\sum_kV(\lambda_k)}
+\end{equation}
+这里$[dU]$是$SU(N)$上的Haar测度，而$J$是变换的雅可比行列式。从这个式子可以看出来$[dU]$是可以单独积出来的，结果是$SU(N)$流形的体积，我们完全可以把他归一化为1，得到：\footnote{实际计算当然是前面对测度自然的定义更舒服}
+\begin{equation}\label{B.47}
+	\langle\mathrm{Tr}(\mathcal{O}(\phi))\rangle=\frac1{\mathcal{Z}}\int J\prod_id\lambda_i\sum_j(\mathcal{O}(\lambda_j))e^{-N\sum_kV(\lambda_k)}
+\end{equation}
+
+现在理论的自由度从原先的$N^2$个减少到了$N$个，也就是说我们只需要关心矩阵的本征值！而不是矩阵本身，我们把矩阵的PDF变成了所有矩阵的谱的PDF！这也是很好理解的，因为矩阵模型一直在强调取trace，而且我们还明白了$SU(N)$对称性是这个理论的数学描述上的冗余！这也是为什么前面说矩阵模型和QCD非常像，实际上QCD完全可以用矩阵的形式去写，不像QCD一样需要引入FP鬼场去消除冗余，矩阵模型的冗余非常容易因子话出来并扔掉。实际上这里还剩下个雅可比行列式，这玩意儿其实就是QCD里面鬼场出来的项，也可以用加鬼的方法来物理地求出这个$J$，这里直接给出结果：
+\begin{equation}
+	\begin{aligned}J=\prod_{i<j}(\lambda_i-\lambda_j)^2\end{aligned}
+\end{equation}
+我们后面再回过头继续看这个，我们现在先局限于$V(\phi)=-\frac12m^2\phi^2$，也就是先考虑最简单的高斯型，上面的分析告诉我们幺正变换不会改变矩阵元的关联函数：
+\begin{equation}
+	\left<U^\dagger \phi U\right>=\left<\phi\right>
+\end{equation}
+利用这一点可得：
+\begin{equation}
+\begin{aligned}
+		G^i_j(z)&\equiv\left<\left(\frac1{z-\Phi}\right)^i_j\right>=\left<\left(U^\dagger\frac{\delta}{z-\lambda_i} U\right)^i_j\right>=\left<\left(\frac{\delta^i_j}{z-\lambda_i}\right)\right>\\
+	&=\frac1N\left\langle\text{Tr}\frac1{z-\Phi} \right\rangle\delta^i_j=\delta^i_j G(z)
+\end{aligned}
+\end{equation}
+这里倒数第二个等号利用了在平均的意义下矩阵的$\lambda_N$都是相等的，所以都等于trace的均值再除掉$N$去做平均。现在计算$\rho(E)$约化为计算$G^{i}_j(z)$，而这一函数可以利用泰勒展开写成：
+\begin{equation}
+	G_j^i(z)=\sum_{n=0}^\infty\frac{1}{z^{2n+1}}\langle\left(\Phi^{2n}\right)_j^i\rangle=\delta_j^i\frac{1}{z}+\frac{1}{z^3}\langle\left(\Phi^2\right)_j^i\rangle+\frac{1}{z^5}\langle\left(\Phi^4\right)_j^i\rangle+....
+\end{equation}
+说白了就是要求关联函数，然后你可能想着去给PDF加源得到配分函数，然后用前面展开的方法得到费曼规则。但是实际上矩阵模型的费曼规则这样做很复杂，带源的矩阵模型可以参见\cite{Brezin:2016eax}，矩阵模型的费曼规则其实是直接“看”出来的。我们首先看两点关联函数：
+\begin{equation}
+	\langle\Phi_j^i\Phi_l^k\rangle=\frac1{\mathcal{Z}}\int[d\phi]\phi_j^i\phi_l^k\exp\left(-N\frac12m^2\sum_{p,q}\phi_q^p\phi_p^q\right)=\delta_l^i\delta_j^k\frac1{Nm^2}
+\end{equation}
+由于Gauss型矩阵模型类似于自由场，有类似的Wick定理，可以把多点关联函数转换为两点关联函数之间的组合\footnote{笑，前面几节都在用路径积分的方法算东西，现在回到正则量子化的数学工具反而更舒服。}
+\begin{theorem}[矩阵模型的Wick定理]
+	\begin{equation}
+		\left<\Phi^i_j\cdots\right>=\text{所有可能的缩并}
+	\end{equation}
+	比如：
+	\begin{equation}
+		\begin{aligned}
+			\left<\Phi^i_j\Phi^k_l\Phi^m_n\Phi^h_t\right>=\wick{\c\Phi^i_j\c\Phi^k_l}\wick{\c\Phi^m_n\c\Phi^h_t}+\wick{\c1\Phi^i_j\c2\Phi^k_l\c1\Phi^m_n\c2\Phi^h_t}+\wick{\c2\Phi^i_j\c1\Phi^k_l\c1\Phi^m_n\c2\Phi^h_t}
+		\end{aligned}
+	\end{equation}
+	这里$\wick{\c\Phi\c\Phi}$的意思是$\left<\Phi\Phi\right>$。这也暗示了所有的$n$为奇数的关联函数都得到0，这从积分的对称性也能看出来。
+\end{theorem}
+这个定理证明起来并不复杂，看些$N$比较小的例子就能相信他的正确性了。我们再来看一下$G^i_j$的展开式里面有什么，首先注意到每项都可以提出来一个$\delta^i_j$，其次是$1/z$可以理解为传播子，然后是$\Phi$的关联函数，利用前面的Wick定理得知其可以看作是一堆两两配对的组合，为了更好地体现具体是哪两个$\Phi$场配对，我们可以引入所谓double line记号:
+\begin{figure}[H]
+	\centering
+	\includegraphics{figs/fig6.pdf}
+	\caption{矩阵模型的费曼图}
+\end{figure}
+上图中第一个是标记两个矩阵配对的，带来一个传播子，在QCD里面这实际上对应胶子传播子，而且注意到两个箭头相反，都是下指标指向上指标。第二个在QCD里面可以理解为夸克传播子\footnote{这一个指标在图上我们没有画出来，也就是说原则上你可以让第二幅图作用分别带指标$i,j$，然后传播子变为$1/z\delta^i_j$，实际上所有的QFT里面的费曼图都可以这么做，把指标完全写出来，只是由于目前没有哪个理论会让某个粒子传播之后自动变成另一个“味”的粒子，所以都会有个$\delta^i_j$。}，毕竟规范场才是带两个指标的矩阵场(因为和生成元结合)，夸克场都只带一个指标。实操一下你就懂了。
+\begin{example}
+	比如$\frac1{z^3}\left<\Phi^i_k\Phi^k_j\right>$可以用下面的图表示为：
+	\begin{figure}[H]
+		\centering
+		\includegraphics{figs/fig7.pdf}
+	\end{figure}
+	这里一个圈代表指标取相同进行求和缩并，所以这里$k=l$。由于要进行求和，所以理论里面的一个圈就会带来一个$N$，注意，这里说的圈是选取某个单线，沿着箭头走，能回到原点的单线个数。然后由于两边各有一个单外线，所以给一个因子$\delta^i_j$，再看双线有一条，所以给一个双线传播子$\frac1{Nm^2}$，最后再看水平方向有几根单线，这里显然有三段单线，所以给传播子$1/z^3$。最终结果为$\delta^i_j/m^2$。
+	
+	再看一个复杂点的例子$\frac1 z^5\left<\Phi^4\right>$，首先先画四根柱子：
+	\begin{figure}[H]
+		\centering
+		\includegraphics{figs/fig8.pdf}
+	\end{figure}
+	然后再考虑怎么连柱子，也就相当于在考虑如何用Wick定理，找不同的缩并方式，事实证明有下面三种：
+	\begin{figure}[H]
+		\centering
+		\includegraphics{figs/fig9.pdf}
+	\end{figure}
+	把这三种加起来就得到总的值，注意，(a)和(c)两个图是平面图，它们给出的项是高于$\mathcal{O}(1/N)$的，因为含有额外的圈，而(b)这种画在平面上一定有交叉的图，圈为0，给出的项会在$N\to\infty$时被压低！这是大N极限理论的普遍性质，只需要考虑那些平面图！
+\end{example}
+\begin{theorem}[魏格纳半圆定律]
+	在$N\to\infty$时，Gauss型随机矩阵模型本征值PDF有如下简单的形式：
+	\begin{equation}
+		\rho(E)=\frac{m^2}{2\pi}\sqrt{\frac4{m^2}-E^2},\quad E\in[-2/m,+2/m]
+	\end{equation}
+\end{theorem}
+\begin{proof}
+	考虑一个典型的图：
+	\begin{figure}[H]
+		\centering
+		\includegraphics{figs/fig10.pdf}
+	\end{figure}
+	显然它可以分解为两个更小的图，中间用一个$1/z$传播子连起来，这些最小的不能再分的图，也就是所谓的单粒子不可约图都是用嵌套一个双线或者重复相连多个图得到的。所谓单粒子不可约，就是不能通过剪短一个传播子使得图变成非连通图。略去$\delta^i_j$，$G(z)$就是所有图的叠加，可以用单粒子不可约图的求和表示为：
+	\begin{equation}
+			G(z)=\quad\frac1z+\frac1z\Sigma(z)\frac1z+\frac1z\Sigma(z)\frac1z\Sigma(z)\frac1z+...
+			=\frac1{z-S(z)}
+	\end{equation}
+	反过来，在$G(z)$上面嵌套一个双线又得到所有的单粒子不可约图求和：
+	\begin{equation}
+		S(z)=\frac1{m^2}G(z)
+	\end{equation}
+	这两点可以用图形表示为：
+	\begin{figure}[H]
+		\centering
+		\includegraphics{figs/fig11.pdf}
+	\end{figure}
+	联立方程求解得到：
+	\begin{equation}
+		G(z)=\frac{m^2}2(z-\sqrt{z^2-\frac4{m^2}})
+	\end{equation}
+\end{proof}
+
+\subsection{戴森气体}
+Gauss型随机矩阵模型还是较为简单，现在我们关注如果加入一个非Gauss的扰动项，大N极限会变成什么样子。还想用费曼图就难搞了，微扰项会加入一些顶点，这些图会变得难画（即使是平面图），而且顶点的费曼规则是non-trivial的，比如你将面对下面的图：\footnote{这两个图都来自t'Hooft发现大N极限的原始论文\cite{tHooft:1973alw}}
+\begin{figure}[H]
+	\centering
+	\includegraphics{figs/fig12.pdf}
+\end{figure}
+下面的拓扑结构：
+\begin{figure}[H]
+	\centering
+	\includegraphics{figs/fig13.pdf}
+\end{figure}
+所以还想用费曼图微扰分析是不可能了，好在统计力学救了我们。现在回到\ref{B.47}，这个公式将理论中冗余的自由度都提前去掉了，所以非常适合进行分析，随机取一个矩阵，也转化为了随机取一组数，这组数和矩阵的关系在于这组数实际上是矩阵的本征值。把雅可比矩阵形式代入得到：
+\begin{equation}\label{B.59}
+	\langle\mathrm{Tr}(\mathcal{O}(\phi))\rangle=\frac1{\mathcal{Z}}\int\prod_id\lambda_i\sum_j(\mathcal{O}(\lambda_j))\exp\left[-NH(\lambda_1,\lambda_2,...,\lambda_N)\right]
+\end{equation}
+其中：
+\begin{equation}
+	H(\lambda_1,\lambda_2,...,\lambda_N)=\sum_iV(\lambda_i)-\frac{1}{N}\frac{1}{2}\sum_{i\neq j}\operatorname{log}(\lambda_i-\lambda_j)^2
+\end{equation}
+如果我们把$N$看成是$\beta$，把$H$理解为哈密顿量，这不就是再说有$N$个粒子，坐标为$\lambda_i$处在$V(\lambda)$的势阱里面，而且相互之间有个对数形式的相互作用势能的气体模型么？我们称为Dyson气体，而$N\to\infty$就是在考虑这个模型的低温展开。
+
+利用统计力学里面的鞍点近似法（王竹溪先生也叫最速下降法），只有在下列方程满足的时候的$\{\lambda_i\}$才对均值有贡献：
+\begin{equation}
+	V'(\lambda_i)=\frac2N\sum_{j\neq i}\frac1{\lambda_i-\lambda_j}
+\end{equation}
+N有限的时候$\lambda$还是离散取值的，但可以预想到$N\to\infty$之后$\lambda$将会在实轴上一段连续的范围内取值，我们称为$A$。上式就可以写成积分形式：
+\begin{equation}\label{B.62}
+	V^{\prime}(\lambda)=2\mathcal{P}\int d\mu\frac{\rho(\mu)}{\lambda-\mu}
+\end{equation}
+$\mathcal{P}$表示取主值部分，对应$\sum_{i\neq j}$。由于现在本征值连续取值，所以最好用一个PDF来表示，$\rho(\mu)d\mu$的意思是本征值落在$\mu\sim\mu+d\mu$之间的个数与总个数$N$之比。所以只有当PDF是上面的构型时才会对$\Tr\left(\mathcal{O}(\Phi)\right)$的均值有贡献。原先\ref{B.59}的积分你肯定是不会积的，但现在只要把这组特殊的$\lambda$带进去就好了：
+\begin{equation}
+	\frac{1}{N}\langle\mathrm{Tr}(\mathcal{O}(\phi))\rangle=\frac{1}{N}\sum\mathcal{O}(\lambda_i)=\int d\lambda\rho(\lambda)\mathcal{O}(\lambda)
+\end{equation}
+这里加入$1/N$因子是为了保证$\rho(\lambda)$的解释不变，另外注意到$\mathcal{Z}$和$\exp$因子抵消了，这是因为配分函数的归一化作用，把可观测量取成单位$\mathbbm{1}$就能看出来。
+
+现在的核心目的就是看能不能把$\rho(\lambda)$写出来，也就是找到Wigner定理的推广。首先本征值$\lambda$的分布范围$A$是一个有限的范围，不然\ref{B.62}在$\lambda\to\infty$的渐近行为为$1/\lambda$，而左边至少有个Gauss项求导得到的线性项$\lambda$，两边不可能相等。类似前面Gauss型引入的$G(z)$，这里我们可以引入\textbf{除了在实轴$A$上有一条割线，其余地方解析的函数}：
+\begin{equation}
+	G(z)=\int_Ad\mu\frac{\rho(\mu)}{z-\mu}
+\end{equation}
+类似有：
+\begin{equation}
+	\rho(\lambda)=-\frac{1}{\pi}\mathrm{Im}G(\lambda+i\epsilon)
+\end{equation}
+而\ref{B.62}等价于：
+\begin{equation}
+	\mathrm{Re}G(\lambda+i\epsilon)=\frac{1}{2}V'(\lambda),\quad\lambda\in A
+\end{equation}
+数学上可以说明，上面说的所有这些条件，加上渐近行为和解析性：
+\begin{equation}
+	z\to\infty,\quad G(z)\sim\frac1z
+\end{equation}
+可以完全确定$G(z)$，从而完全确定$\rho(\lambda)$。
+\begin{example}
+	以$V(\lambda)=\frac{1}{2}m^{2}\lambda^{2}+g\lambda^{4}$为例，其导数是一个奇函数，直接得出$\rho(\lambda)$是一个偶函数，对应的$A$也就应该关于原点对称为$[-a,a]$。设试探解：
+	\begin{equation}
+		G(z)=\frac12V^{\prime}(z)-P(z)\sqrt{z^2-a^2}
+	\end{equation}
+	其中$P(z)$是一个多项式，
+	\begin{equation}
+		\rho(\lambda)=\frac1\pi P(\lambda)\sqrt{a^2-\lambda^2}
+	\end{equation}
+	由于$\rho$是偶函数，所以$P(z)$只含偶次幂，另外由于$z\to\infty,\quad G(z)\sim\frac1z$，$P(z)$最多包含$z^2$，故$P(z)=c+dz^2$，把$G(z)$在$z\to\infty$处做洛朗展开，要求只剩下$\mathcal{O}(1/z)$的项，最终得到方程：
+	\begin{equation}
+		\begin{cases}
+			-d+2g=0\\
+			-2c+a^2d+m^2=0\\
+			4a^2c+a^4d=0
+		\end{cases}
+	\end{equation}
+	联立求解得到：\footnote{有三个解，但注意到$a\in\mathbb{R}$}
+	\begin{equation}
+		P(z)=\frac{1}{2}m^2+2gz^2,\quad a\to 0
+	\end{equation}
+	这就相当于推广了Wigner定理。
+\end{example}
