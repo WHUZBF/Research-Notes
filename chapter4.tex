@@ -1,2 +1,34 @@
 \chapter{AdS/CFT对偶}
 \section{大$N$极限}
+本节的主要思想在\ref{B.5}中已经介绍不少了，本节目的是把目光局限在$SU(N)$ Y-M理论，这一话题的绝佳参考资料是\href{https://www.damtp.cam.ac.uk/user/tong/gaugetheory.html}{David Tong的规范场论讲义}对应章节。
+\subsection{复习规范场}
+首先随便\footnote{实际上这一选取不能是随便的，需要有些限制，详见Gelis\cite{Gelis:2019yfm}。}选一个规范群$G$。然后再加入一些标量场或者旋量场，它们处于$G$的某个表示之中，也就是说，在：
+\begin{equation}\label{4.1.1}
+	\phi_i(x)\mapsto U_{ij}\phi_j(x),\quad U_{ij}\in G
+\end{equation}
+的场位形变换下$\phi_i$(略去了旋量指标)的作用量应该保持不变，理论具有$G$的内禀对称性。现在我们把$U_{ij}$换成一个local的东东，也就是把每个元素都换成一个和空间位置有关的函数。显然我们利用$\phi_i$构造的拉氏量$\mathcal{L}(\partial\phi,\phi)$不一定在local的规范群下是不变的，罪魁祸首就是$\partial$，现在还要多出$\partial U$的项。可以考虑引入一个规范场$A^\mu$，在规范群的作用下如此变换：\footnote{其实就是在说其处于自伴表示下}
+\begin{equation}\label{4.1.2}
+	A_\mu(x)\mapsto U(x)A_\mu (x)U^\dagger (x)+\frac i g U(x)\partial_\mu U^\dagger(x)
+\end{equation}
+注意这里$A_\mu$是一个$N\times N$的矩阵形式的场，我们略去了矩阵指标，它也可以在生成元$T^a$基底下展开为$A^a T^a$。如果我们做下面的替换：
+\begin{equation}
+	\mathcal{L}(\partial\phi,\phi)\mapsto\mathcal{L}(D\phi,\phi),\quad D_\mu\equiv \partial_\mu -igA_\mu
+\end{equation}
+那么可以证明$\mathcal{L}$就在local规范群的作用下也是不变的，也就是说对场位形进行变换\ref{4.1.1}和\ref{4.1.2}导致的物理是不变的，而场位形本身不是可测的，我们关心的是场的激发导致的散射振幅。这意味着场位形空间是存在冗余的，这些由规范群联系起来的场位形应该看作是同一个场，路径积分也只用积一次，这直接导致了鬼场作为一个辅助场的存在。\footnote{这里有点微妙，$\phi_i$路径积分里面还是需要积分所有场位形，因为我们应该把\ref{4.1.1}看作是规范场变换\ref{4.1.2}诱导出来的一个被动的变换，所以一旦我们通过FP量子化方法取定了$A$的一个规范，那么用$U$联系的$\phi$也要看成不同。就像是现在把$A$当成横轴，$\phi$当纵轴，把$y=kx,k\in\mathbb{R}$线上的$(A,\phi)$看成等同，为了消除冗余，可以先固定$A$，那么$\phi$依然是自由的，每个$\phi$给出一个物理上独立的场位形$(A,\phi)$。}
+\begin{remark}
+	说到这里还是要多说一点，global的对称性和local的规范对称性看起来都是对场操作一下后$\mathcal{L}$不变，或者差个全导数。但是前者是真正的动力学对称性，也就是说可以用Noether定理推出非平凡守恒荷的，但是后者仅仅只是数学上描述的冗余，why？因为我们讲动力学对称性，话题的主角不是场位形本身，而是场的激发产生的物理态，动力学对称性就是说对态进行变换后得到一个新的态，两者的运动方程形式完全一致，是一样的动力学演化。比如中心势场问题，把物体的运动轨迹旋转一下，物理上可区分这两个不同的态，但是它们遵循相同的演化方程。而local的规范对称性只是数学上的冗余，只是拉氏量本身的对称性，没有任何的动力学意义，也就是说变换前后两个态就是物理上无法区分的，而且不会带来非平凡守恒荷。所以前者我们场位形需要全积，后者我们只需要积某个特定规范下的场位形。当然，在无穷远处不归0的规范变换实际上是真正的对称性，即所谓渐近对称性，这个就不多谈了，具体可见A.Strominger的工作。
+\end{remark}
+
+规范场有两种视角来看，第一种就是因为我们要求的散射振幅是$\left<A^aA^b\cdots\right>$这些带色指标的分量场构成的关联函数（前面还要乘上对应的极化矢量）。所以可以直接用$A^a$来写费曼规则。第二种就是由于$A^a=\tr \left(A T^a\right)$，所以我们可以先把$A^\mu$就看作一个独立的矩阵，直接从矩阵来写费曼规则，最后原则上散射振幅就能用$\left<{A^{i}}_j{A^{k}}_l\ldots\right>$求迹得到。类似于\ref{B.5}中的double line表示，对于和一个费米子耦合的YM理论：
+\begin{equation}
+	1
+\end{equation}
+有：
+\begin{equation}
+	1
+\end{equation}
+所以费曼图为：
+\begin{equation}
+	1
+\end{equation}
+我们忽略了鬼场的影响，不过就后面讨论的目的而言问题不大。
