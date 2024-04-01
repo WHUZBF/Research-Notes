@@ -652,3 +652,27 @@ $\mathcal{P}$表示取主值部分，对应$\sum_{i\neq j}$。由于现在本征
 	\end{equation}
 	这就相当于推广了Wigner定理。
 \end{example}
+\section{复叠空间}
+本节是拓扑学补疑，基本是本科数学系拓扑学课程最后介绍的内容，我觉得很美妙。
+\subsection{Erlangen纲领}
+Erlangen纲领试图将所有的几何学用统一的框架去描述。
+\begin{table}
+	\centering
+	\resizebox*{\linewidth}{!}{
+	\renewcommand{\arraystretch}{2}
+	\begin{tabular}{|>{\columncolor{lightgray}}c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\rowcolor{lightgray}
+		\hline & $\pi_{1}$ & $\pi_{2}$ & $\pi_{3}$ & $\pi_{4} $& $\pi_{5} $& $\pi_{6} $& $\pi_{7}$ & $\pi_{8} $&$ \pi_9 $& $\pi_{10}$ & $\pi_{11} $& $\pi_{12} $& $\pi_{13}$ &$ \pi_{14}$ & $\pi_{15}$ \\
+		\hline $\mathcal{S}^{1} $& $\mathbb{Z}$ & $0$ & $0$ & $0 $&$0$&$0$&$0$&$0$&$0$&$0$&$0$&$0$&$0$&$0$&$0$\\\hline\cline{2-3}
+		 $\mathcal{S}^{2}$ & $0$ & $\mathbb{Z}$ & \multicolumn{1}{|c|}{\cellcolor{yellow!30}$\mathbb{Z}$} &$\mathbb{Z}_{2} $&$\mathbb{Z}_{2}$ &$\mathbb{Z}_{12}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{3}$&$\mathbb{Z}_{15}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}^{2}$&$\mathbb{Z}_{12} \times\mathbb{Z}_{2}$&$\mathbb{Z}_{84} \times\mathbb{Z}_{2}^{2}$&$\mathbb{Z}_{2}^{2} $\\\hline \cline{4-5}
+		$\mathcal{S}^{3}$ &$0$&$0$& $\mathbb{Z}$&$\mathbb{Z}_{2}$&\multicolumn{1}{|c|}{$\mathbb{Z}_{2}$}&$\mathbb{Z}_{12}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{3}$&$\mathbb{Z}_{15}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}^{2}$&$\mathbb{Z}_{12} \times\mathbb{Z}_{2}$&$\mathbb{Z}_{84} \times\mathbb{Z}_{2}^{2}$&$\mathbb{Z}_{2}^{2} $\\
+		\hline\cline{6-7}$ \mathcal{S}^{4}$ &$0$&$0$&$0$& $\mathbb{Z}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}$&\multicolumn{1}{|c|}{\cellcolor{yellow!30}$\mathbb{Z}\times \mathbb{Z}_{12}$}&$\mathbb{Z}_{2}^{2}$&$\mathbb{Z}_{2}^{2}$&$\mathbb{Z}_{24} \times\mathbb{Z}_{3}$&$\mathbb{Z}_{15}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}^{3}$&$
+		\mathbb{Z}_{120} {\times}\mathbb{Z}_{12} \times \mathbb{Z}_{2}$&$\mathbb{Z}_{84} \times\mathbb{Z}_{2}^{5} $\\
+		\hline\cline{8-9} $\mathcal{S}^{5}$ &$0$&$0$&$0$&$0$& $\mathbb{Z}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{24}$&\multicolumn{1}{|c|}{$\mathbb{Z}_{2}$}&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{30}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}^{3}$&$\mathbb{Z}_{72} \times\mathbb{Z}_{2}$ \\
+		\hline\cline{10-11} $\mathcal{S}^{6}$ &$0$&$0$&$0$&$0$&$0$& $\mathbb{Z}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{24} $&$0$& \multicolumn{1}{|c|}{\cellcolor{yellow!30}$\mathbb{Z}$}&$\mathbb{Z}_{2}$&$\mathbb{Z}_{60}$&$\mathbb{Z}_{24} \times\mathbb{Z}_{2}$&$\mathbb{Z}_2^3 $\\
+		\hline\cline{12-13}$ \mathcal{S}^{7}$ &$0$&$0$&$0$&$0$&$0$&$0$& $\mathbb{Z} $&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{24}$ &$0$&$0$&\multicolumn{1}{|c|}{$\mathbb{Z}_{2}$}&$Z_{120}$&$\mathbb{Z}_2^3$ \\
+		\hline\cline{14-15}$\mathcal{S}^{8} $&$0$&$0$&$0$&$0$&$0$&$0$&$0$& $\mathbb{Z}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{2}$&$\mathbb{Z}_{24}$ &$0$&$0$&$\mathbb{Z}_{2}$&\multicolumn{1}{|c|}{\cellcolor{yellow!30}$\mathbb{Z}\times \mathbb{Z}_{120}$} \\
+		\hline
+	\end{tabular}}
+	\caption{高维球面的高维基本群}
+\end{table}
