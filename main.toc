@@ -1,0 +1,53 @@
+\thispagestyle {empty}
+\contentsline {chapter}{导言}{1}{chapter*.2}%
+\contentsline {part}{\numberline {一}物理}{3}{part.1}%
+\contentsline {chapter}{\numberline {1}流体/引力对偶}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}量子纠缠与散射振幅}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {3}黑洞}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}AdS/CFT对偶}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}大$N$极限}{11}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}复习规范场}{11}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}大$N$极限下的Yang-Mills理论}{12}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}大$N$极限量子色动力学}{14}{subsection.4.1.3}%
+\contentsline {chapter}{\numberline {5}超对称}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}标准模型}{15}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}标准模型拉氏量}{15}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}为什么需要超对称？}{17}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}超Poincar\'e代数与超空间}{18}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Wess-Zumino模型}{18}{section.5.3}%
+\contentsline {part}{\numberline {二}数学}{19}{part.2}%
+\contentsline {chapter}{\numberline {6}p-adic}{21}{chapter.6}%
+\contentsline {chapter}{\numberline {7}量子力学与Morse理论}{23}{chapter.7}%
+\contentsline {section}{\numberline {7.1}量子力学基础}{23}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Wyle算符}{23}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}一维散射问题}{24}{subsection.7.1.2}%
+\contentsline {part}{\numberline {三}附录}{27}{part.3}%
+\contentsline {chapter}{\numberline {A}物理疑难杂症}{29}{appendix.A}%
+\contentsline {section}{\numberline {A.1}真空态与绘景}{29}{section.A.1}%
+\contentsline {section}{\numberline {A.2}轴子和伸缩子}{29}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}轴子(Axion)}{29}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}轴子电动力学}{29}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}伸缩子(Dilaton)}{29}{subsection.A.2.3}%
+\contentsline {section}{\numberline {A.3}费曼规则}{29}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}标量场和矢量场}{29}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Dirac和Majorana费米子}{31}{subsection.A.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}拉氏量顶点项中含有偏导数}{34}{subsection.A.3.3}%
+\contentsline {chapter}{\numberline {B}数学疑难杂症}{39}{appendix.B}%
+\contentsline {section}{\numberline {B.1}直积$\cdot $张量积$\cdot $直和}{39}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Grassmann几何}{42}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}外代数}{42}{subsection.B.2.1}%
+\contentsline {section}{\numberline {B.3}李超代数}{44}{section.B.3}%
+\contentsline {section}{\numberline {B.4}切矢，微分，子流形和Frobenius定理}{46}{section.B.4}%
+\contentsline {subsection}{\numberline {B.4.1}切矢和微分}{46}{subsection.B.4.1}%
+\contentsline {section}{\numberline {B.5}中心极限定理与随机矩阵模型}{47}{section.B.5}%
+\contentsline {subsection}{\numberline {B.5.1}一些关于概率论的常识}{47}{subsection.B.5.1}%
+\contentsline {subsection}{\numberline {B.5.2}$0+0$维QFT}{48}{subsection.B.5.2}%
+\contentsline {subsection}{\numberline {B.5.3}所以什么是正统的费曼图？}{52}{subsection.B.5.3}%
+\contentsline {subsection}{\numberline {B.5.4}随机矩阵模型}{53}{subsection.B.5.4}%
+\contentsline {subsection}{\numberline {B.5.5}戴森气体}{57}{subsection.B.5.5}%
+\contentsline {section}{\numberline {B.6}复叠空间}{60}{section.B.6}%
+\contentsline {subsection}{\numberline {B.6.1}Erlangen纲领}{60}{subsection.B.6.1}%
+\contentsline {section}{\numberline {B.7}纤维丛和规范场}{60}{section.B.7}%
+\contentsline {section}{\numberline {B.8}$SO(N)$旋量表示}{60}{section.B.8}%
+\contentsline {chapter}{参考文献}{61}{appendix*.3}%
+\contentsfinish 
