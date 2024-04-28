@@ -42,11 +42,11 @@ Wyle算符就定义称折中的方案：
 
 \subsection{一维散射问题}
 考虑一个在$[x_1,x_2]$内才不为0的势场，入射波能量$E>0$。量子力学对这个问题已经充分的研究过了，我们只需在平面波边界条件下求解下面的薛定谔方程就好：
-\begin{equation}\ref{7.6}
+\begin{equation}\label{7.6}
 	-\frac{\hbar^2}{2}\psi^{\prime\prime}+V(x)\psi= E\psi
 \end{equation}
 其中我们已经选取合适的量纲使得$m=1$。数学上并不是解方程这么玩的，下面我们就来欣赏一下数学家的做法，数学家或许不能告诉你这个微分方程具体的解，但是他却能告诉你非常多的解的性质。首先假设方程\ref{7.6}的解空间为$L$，这是一个二维的函数线性空间。现在考虑$(-\infty,x_1)\cup(x_2,+\infty)$上的薛定谔方程：
-\begin{equation}\ref{7.7}
+\begin{equation}\label{7.7}
 	-\frac{\hbar^2}{2}\psi^{\prime\prime}= E\psi
 \end{equation}
 对应的解空间设为$L_0=\operatorname{span}\{e_1=\sin(kx),e_2=\cos(kx)\}$。则可以定义单值化算子：
@@ -63,7 +63,7 @@ Wyle算符就定义称折中的方案：
 		M\equiv B_+B_-^{-1}
 	\end{equation}
 \end{definition}
-熟悉高等量子散射理论的我们立刻就可以看出这里的$B_{\pm}$其实就是Moller算符$\Omega_{\pm}$，而这里的$M$其实就是散射矩阵$S\equiv\Omega_-^\dagger\Omega_+$。
+熟悉高等量子散射理论的我们立刻就可以看出这里的$B_{\pm}$其实就是Moller算符$\Omega_{\pm}$，而这里的$M$其实就像是散射矩阵$S\equiv\Omega_-^\dagger\Omega_+$。
 
 在$L_0$中选取正弦余弦作为基底，设$\eta\xi\in L_0$，定义下面的楔积，用对易子符号表示\footnote{有点符号混用}:
 \begin{equation}
@@ -85,11 +85,11 @@ Wyle算符就定义称折中的方案：
 	\end{equation}
 \end{lemma}
 \begin{proof}
+	由于$\{\psi,\phi\}$与$x$无关，所以
 	\begin{equation}
-		\begin{aligned}
-			1
-		\end{aligned}
+			\{\psi,\phi\}=\{\psi,\phi\}_{x<x_1}=k(-\xi_1\eta_2+\xi_2\eta_1)=-k[B_-\psi,B_-\phi]
 	\end{equation}
+	另一个等式可以通过把上面证明中$x<x_1$换成$x>x_2$就完成了证明。
 \end{proof}
 现在来证明定理\ref{7.1.3}：
 \begin{proof}
@@ -101,8 +101,79 @@ Wyle算符就定义称折中的方案：
 
 注意我们到现在为止讨论的都是实值函数空间，实际上量子力学里面更方便的做法是考虑$L_0,L_1$的复化，这样做会方便很多。
 \begin{definition}[复化]
-	
+	设$V$ 是实向量空间。
+	\begin{itemize}
+		\item 	$ V$的复化(记作$V_\mathbb{C}$)等于$V\times V$，其元素是有序对 $(u,v)$，其中 $u,v\in V$
+		但我们把它写作$u+\mathrm{i}v$。\\
+		\item
+		定义$V_{\mathbf{C}}$ 上的加法为
+		$$(u_1+\mathrm{i}v_1)+(u_2+\mathrm{i}v_2)=(u_1+u_2)+\mathrm{i}(v_1+v_2)$$
+		其中$u_1,v_1,u_2,v_2\in V$。\\
+		\item
+		定义$V_{\mathbb{C}}$上的复标量乘法为
+		$$(a+b\text{i})(u+\text{i}v)=(au-bv)+\text{i}(av+bu)$$
+		其中$a, b\in \mathbb{R} , \quad u, v \in V$。
+	\end{itemize}
+	原先实向量空间的算子$T$可自然复化为$T_{\mathbb{C}}$，$T_\mathbb{C}(u+iv)\equiv T(u)+iT(v) $
 \end{definition}
 \begin{remark}
 	这其实涉及到量子力学为什么需要复数，能否构造纯粹在实数空间上定义的量子力学？近年来潘建伟老师组的实验工作否定了这一点\cite{Renou:2021dvp,Chen:2021ril}，我从文章\cite{karam_why_2020}的角度来稍微提一下。
 \end{remark}
+
+复化之后$L_0^\mathbb{C}$中的基底用行波写成$\operatorname{span}\{f_1=e_1+\mathrm{i}e_2,f_2=e_1-\mathrm{i}e_2\}$，可以在$L_0^\mathbb{C}$上定义一个Hermite形式：
+\begin{equation}
+	\left< \xi,\eta\right>=\frac{1}{2\mathrm{i}}\left[\xi,\bar \eta\right]
+\end{equation}
+这里的bar表示复共轭，这个形式其实就是不要求正定的内积，很容易证明在$f_{1/2}$基底下$\left< f_i,f_j\right>=\operatorname{diag}(-,+)$。在复化后的$L_0$上现在定义了三种代数结构$[\cdot,\cdot],\left<\cdot,\cdot\right>$和$\bar\cdot$。现在考虑分别保这三种代数结构的算子群。
+\begin{description}
+	\item[保楔积] $[A\xi,A\eta]=[\xi,\eta]$，则$A$构成一个群：$Sp(1,\mathbb{C})\cong SL(2,\mathbb{C})$\\
+	\item[保内积] $\left< A\xi,A\eta\right>=\left<\xi,\eta\right>$，则$A$构成群：$U(1,1)$\\
+	\item[保共轭] $A\bar\xi=\overline{A\xi}$，则$A$构成群：$GL(2,\mathbb{R})$
+\end{description}
+这三个群的集合可以用下面的图表示，他们是有交集的：
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		%% You can adjust the opacity here. For venn diagrams it is convenient to have a low opacity so that you can see intersections
+		\begin{scope} [fill opacity = .4]
+			%% The draw command knows a lot of shapes. To make a rectangle you just need to specify two diagonal corners. Make sure you always have a semicolon at the end of your draw commands, otherwise latex flips out.
+			%% Similarly, you can make a circle by specifying the center and then the radius. You can also add a fill color, but if you're printing in black and white you'll probably want to remove that line.
+			\draw[fill=green, draw = black] (-1.4,1) circle (2);
+			\draw[fill=blue, draw = black] (1.6,1) circle (2);
+			\draw[fill=red, draw = black] (0,-1.5) circle (2);
+			%% We can use the node command to label points. If you put your cursor on "LARGE" or "textbf" a box will drop down with size and text style options.
+			\node at (-3.3,3) {\LARGE $Sp(1,\mathbb{C})$};
+			\node at (3.3,3) {\LARGE $U(1,1)$};
+			\node at (-3,-3) {\LARGE $GL(2,\mathbb{R})$};
+		\end{scope}
+		%% And now you have a venn diagram. Yay!
+		%\draw[help lines](-5,5) grid (5,-6);    This line can draw the grid lines to help guide you. I use these when I'm writing the code and then delete this line when I publish the pdf.
+	\end{tikzpicture}
+\end{figure}
+不难发现:
+\begin{equation}
+	Sp(1,\mathbb{C})\cap U(1,1)\cap GL(2,\mathbb{R})=SL(2,\mathbb{R})\cong SU(1,1)
+\end{equation}
+这其实就是$M$所在的集合，所以$M$很重要的一条性质是保$\left<\cdot,\cdot\right>$，也就是：\footnote{我们默认选取了$f_{1/2}$这组基底}
+\begin{equation}
+	M^\dagger I M =I,\quad I\equiv\operatorname{diag}(-,+)
+\end{equation}
+这直接导致$M$可以写成下面的形式：
+\begin{equation}
+	M=\begin{pmatrix}
+		\alpha&\bar\beta \\
+		\bar\beta&\bar\alpha
+	\end{pmatrix},\quad |\alpha|^2-|\beta|^2=1
+\end{equation}
+现在考虑下面的$L_0$上的解，根据$M$是同构可以得知一定存在唯一的$L$中的解与之唯一对应：
+\begin{equation}
+	\psi_0=\begin{cases}
+		f_1+r f_2&,x<x_1\\
+		\tau f_1&,x>x_2
+	\end{cases}
+\end{equation}
+只用证存在$M$使得$M\cdot (1,r)^\mathrm{T}=(\tau,0)^\mathrm{T}$即可，列出方程即可解得：
+\begin{equation}
+	r=-\frac{\beta}{\bar\alpha},\quad \tau=\frac{1}{\bar\alpha}
+\end{equation}
+其中$T\equiv|\tau|^2,R\equiv|r|^2$，他们之和为1，注意到由于$\alpha\neq 0$，所以无论如何体系都会有个非0的透射概率，当然反射概率可能为0。这和经典力学有很大的不同，经典力学透射必须要求$E>V_{\max}$。
